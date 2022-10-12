@@ -17,7 +17,7 @@
     background-color: #161b22;
 }
 
-clear {
+.clear {
     clear: both;
 }
 
@@ -125,4 +125,8 @@ h3 {
 
 .mh-posts-list-excerpt {
     overflow: hidden;
+}
+
+.open {
+    display: block;
 }
