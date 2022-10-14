@@ -165,8 +165,16 @@ h3 {
     padding: 32px 0;
 }
 
-.max-w-60 {
-    max-width: 60%;
+.max-w-50 {
+    max-width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-50 {
+    width: 50%;
 }
 
 .w-30{
@@ -176,4 +184,15 @@ h3 {
 .border-t-1 {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+}
+
+/* header */
+
+.bg-header {
+    background-color: #dee5e7;
+}
+
+.shadow-header {
+    box-shadow: 0 10px 10px rgb(0 0 0 / 5%);
+    
 }
