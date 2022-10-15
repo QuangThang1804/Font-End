@@ -4,10 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 body{
-  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
@@ -16,7 +15,7 @@ body{
   color: #fff;
   background: #1a81ff;
 }
-.status {
+.status-big {
   width: 500px;
   height: 400px;
   overflow: hidden;
@@ -25,23 +24,23 @@ body{
   transition: height 0.2s ease;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
-.status .active{
+.status-big .active{
   height: 590px;
 }
-.status  .wrapper{
+.status-big  .wrapper{
   display: flex;
 }
-.status  .wrapper section{
+.status-big  .wrapper section{
   width: 500px;
   background: #fff;
 }
-.status  img{
+.status-big  img{
   cursor: pointer;
 }
-.status  .post{
+.status-big  .post{
   transition: margin-left 0.18s ease;
 }
-.status .active .post{
+.status-big .active .post{
   margin-left: -500px;
 }
 .post header{
@@ -173,11 +172,11 @@ form textarea:valid ~ button{
 form textarea:valid ~ button:hover{
   background: #1a81ff;
 }
-.status  .audience{
+.status-big  .audience{
   opacity: 0;
   transition: opacity 0.12s ease;
 }
-.status .active .audience{
+.status-big .active .audience{
   opacity: 1;
 }
 
