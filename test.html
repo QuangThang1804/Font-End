@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="./src/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./adminPage.css">
+    <title>Trang Admin</title>
+</head>
+    
+<body>
+  
+  <div
+  class="flex h-screen bg-gray-50 dark:bg-gray-900"
+  :class="{ 'overflow-hidden': isSideMenuOpen}"
+>
+  <!-- Desktop sidebar -->
+  <aside
+    class="z-20 flex-shrink-0 hidden w-1/4 overflow-y-auto bg-white dark:bg-gray-800 md:block"
+  >
+    <div class="py-4 text-gray-500 dark:text-gray-400">
+      <a
+        class="ml-6 text-lg  font-bold text-gray-800 dark:text-gray-200"
+        href="#"
+      >
+        Trang admin
+      </a>
+      <ul class="mt-6">
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+          <a
+            class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
+            href="index.html"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+            <span class="ml-4">Trang chủ</span>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+          <a
+            class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
+            href="svPage.html"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+              ></path>
+            </svg>
+            <span class="ml-4">Sinh viên</span>
+          </a>
+        </li>
+
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+          <a
+            class="inline-flex items-center justify-start w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
+            href="gvPage.html"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+              ></path>
+            </svg>
+            <span class="ml-4">Giảng viên</span>
+          </a>
+        </li>
+
+
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+          <button
+            class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-white dark:hover:text-gray-200"
+            @click="togglePagesMenu"
+            aria-haspopup="true"
+          >
+            <span class="inline-flex items-center">
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                ></path>
+              </svg>
+              <span class="ml-4">Pages</span>
+            </span>
+            
+        
+        </li>
+      </ul>
+      <div class="px-6 my-6">
+        <button
+          class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+        >
+          Create account
+          <span class="ml-2" aria-hidden="true">+</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <!-- Backdrop -->
+  <div
+    x-show="isSideMenuOpen"
+    x-transition:enter="transition ease-in-out duration-150"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in-out duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 z-10 flex items-end bg-transparent bg-opacity-50 sm:items-center sm:justify-center"
+  ></div>
+  <aside
+    class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
+    x-show="isSideMenuOpen"
+    x-transition:enter="transition ease-in-out duration-150"
+    x-transition:enter-start="opacity-0 transform -translate-x-20"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in-out duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0 transform -translate-x-20"
+    @click.away="closeSideMenu"
+    @keydown.escape="closeSideMenu"
+  >
+    <div class="py-4 text-gray-500 dark:text-gray-400">
+      <a
+        class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+        href="#"
+      >
+        Trang admin
+      </a>
+      <ul class="mt-6">
+        <li class="relative px-6 py-3">
+          <a
+            class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 hover:bg-purple-700 hover:text-gray-800 dark:hover:text-gray-200"
+            href="index.html"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+              ></path>
+            </svg>
+            <span class="ml-4">Trang chủ</span>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li class="relative px-6 py-3 ">
+          <a
+            class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 hover:bg-purple-700 hover:text-gray-800 dark:hover:text-gray-200"
+            href="svPage.html"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+              ></path>
+            </svg>
+            <span class="ml-4">Sinh viên</span>
+          </a>
+        </li>
+
+        <li class="relative px-6 py-3">
+          <a
+            class="inline-flex items-center w-full text-sm font-medium transition-colors duration-150 hover:bg-purple-700 hover:text-gray-800 dark:hover:text-gray-200"
+            href=""
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+              ></path>
+            </svg>
+            <span class="ml-4">Giảng viên</span>
+          </a>
+        </li>
+
+        <li class="relative px-6 py-3">
+          <span
+            class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+            aria-hidden="true"
+          ></span>
+          <a
+            class="inline-flex items-center w-full text-sm font-medium text-gray-800 transition-colors duration-150 hover:bg-purple-700 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+            href=""
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="px-6 my-6">
+        <button
+          class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+        >
+          Create account
+          <span class="ml-2" aria-hidden="true">+</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div>
+    <header>
+      <nav class="header bg-white border-gray-200 px-4 lg:px-6 py-2.5 pt-3 dark:bg-white shadow-header">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="#" class="flex items-center">
+            <img src="./src/img/logo-hus.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-blue-900">HUS</span>
+          </a>
+          <div class="flex items-center lg:order-2">
+            <!-- search button -->
+            <div
+              class="relative rounded-2xl bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:px-10 contents">
+              <div class="mx-auto max-w-md mx-4">
+
+
+                <form action="" class="relative mx-auto w-max">
+                  <input type="search"
+                    class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border pl-12 outline-none text-gray-800 focus:w-full focus:cursor-text focus:border-gray-400 focus:pl-16 focus:pr-4 bg-transparent " />
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent text-black px-3.5 peer-focus:border-white peer-focus:text-gray-800"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </form>
+              </div>
+            </div>
+
+            <a href="#"
+              class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Log
+              in
+            </a>
+
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
+              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+
+            <button data-collapse-toggle="mobile-menu-2" type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <li>
+                <a href="#"
+                  class="block py-2 pr-4 pl-3 text-white rounded bg-blue-700 lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white"
+                  aria-current="page">Home</a>
+              </li>
+              <li>
+                <a id="buttonNCKH"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Nghiên
+                  cứu khoa học</a>
+              </li>
+              <li>
+                <a id="buttonDeThi"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Đề
+                  Thi</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Các
+                  Trường</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  </div>            
+      <!-- With actions -->
+        <h4
+          class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
+        >
+          Table with actions
+        </h4>
+        <div class="w-full overflow-hidden rounded-md shadow-xs">
+          <div class="w-full overflow-x-auto">
+            <table class="w-full whitespace-no-wrap">
+              <thead>
+                <tr
+                  class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                >
+                  <th class="px-4 py-3">ID</th>
+                  <th class="px-4 py-3">Mã sinh viên</th>
+                  <th class="px-4 py-3">Họ và tên</th>
+                  <th class="px-4 py-3">Đề tài</th>
+                  <th class="px-4 py-3">Trạng thái</th>
+                  <th class="px-4 py-3">Ngày đăng</th>
+                  <th class="px-4 py-3">Actions</th>
+                </tr>
+              </thead>
+              <tbody
+                class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
+              >
+                <tr class="text-gray-700 dark:text-gray-400">
+                  <td class="px-4 py-3 text-sm">
+                    <!-- Stt/ id-->
+                    <h2 class="text-pi"> 1 </h2>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <!-- MSV-->
+                    <h2 class="text-purple-800"> 2100695 </h2>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center text-sm">
+                      <!-- Avatar with inset shadow -->
+                      <div
+                        class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
+                      >
+                        <img
+                          class="object-cover w-full h-full rounded-full"
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqOPXLlEkB6XnnKpTJSjvEJK3gpfmf8RpotA&usqp=CAU"
+                          alt=""
+                          loading="lazy"
+                        />
+                        <div
+                          class="absolute inset-0 rounded-full shadow-inner"
+                          aria-hidden="true"
+                        ></div>
+                      </div>
+                      <div>
+                        <p class="font-semibold">Minh Ngọc</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                          Sinh viên
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <!-- link đề tài-->
+                  </td>
+                  <td class="px-4 py-3 text-xs">
+                    <span
+                      class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
+                    >
+                      Approved
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    08/10/2022
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center space-x-4 text-sm">
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Edit"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                          ></path>
+                        </svg>
+                      </button>
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Delete"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3 text-sm">
+                        <!-- Stt/ id-->
+                    <h2 class="text-pi"> 2 </h2>
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+                        <!-- MSV-->
+                        <h2 class="text-purple-800"> 2000784 </h2>
+                      </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center text-sm">
+                      <!-- Avatar with inset shadow -->
+                      <div
+                        class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
+                      >
+                        <img
+                          class="object-cover w-full h-full rounded-full"
+                          src="https://kenh14cdn.com/QuickNewsK14/4071215/2015/02/img_201502231923258226.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                        <div
+                          class="absolute inset-0 rounded-full shadow-inner"
+                          aria-hidden="true"
+                        ></div>
+                      </div>
+                      <div>
+                        <p class="font-semibold">Quang Thăng</p>
+                        <p class="text-xs text-gray-600 ">
+                          Sinh viên
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    Null
+                  </td>
+                  <td class="px-4 py-3 text-xs">
+                    <span
+                      class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full dark:text-white dark:bg-orange-600"
+                    >
+                      Pending
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    12/9/2022
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center space-x-4 text-sm">
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Edit"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                          ></path>
+                        </svg>
+                      </button>
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Delete"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="text-gray-700 dark:text-gray-400">
+                  <td class="px-4 py-3 text-sm">
+                    <!-- Stt/ id-->
+                    <h2 class="text-pi"> 3 </h2>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <!-- MSV-->
+                    <h2 class="text-purple-800"> 2000346 </h2>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center text-sm">
+                      <!-- Avatar with inset shadow -->
+                      <div
+                        class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
+                      >
+                        <img
+                          class="object-cover w-full h-full rounded-full"
+                          src="https://znews-photo.zingcdn.me/w660/Uploaded/tmuizd/2014_07_05/nhan_1.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                        <div
+                          class="absolute inset-0 rounded-full shadow-inner"
+                          aria-hidden="true"
+                        ></div>
+                      </div>
+                      <div>
+                        <p class="font-semibold">Minh Nhật</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                          Sinh viên
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <!-- link đề tài-->
+                  </td>
+                  <td class="px-4 py-3 text-xs">
+                    <span
+                      class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700"
+                    >
+                      Denied
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    18/09/2022
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center space-x-4 text-sm">
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Edit"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                          ></path>
+                        </svg>
+                      </button>
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Delete"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="text-gray-700 dark:text-gray-400">
+                  <td class="px-4 py-3 text-sm">
+                    <!-- Stt/ id-->
+                    <h2 class="text-pi"> 4 </h2>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <!-- MSV-->
+                    <h2 class="text-purple-800"> HUS Lecturer </h2>
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center text-sm">
+                      <!-- Avatar with inset shadow -->
+                      <div
+                        class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
+                      >
+                        <img
+                          class="object-cover w-full h-full rounded-full"
+                          src="https://anhdephd.vn/wp-content/uploads/2022/05/anh-soai-ca-cuc-ngau-507x600.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                        <div
+                          class="absolute inset-0 rounded-full shadow-inner"
+                          aria-hidden="true"
+                        ></div>
+                      </div>
+                      <div>
+                        <p class="font-semibold">Trọng Tiến</p>
+                        <p class="text-xs text-gray-600 dark:text-gray-400">
+                          Giảng viên
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <!-- link đề tài-->
+                  </td>
+                  <td class="px-4 py-3 text-xs">
+                    <span
+                      class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
+                    >
+                      Approved
+                    </span>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    23/12/2021
+                  </td>
+                  <td class="px-4 py-3">
+                    <div class="flex items-center space-x-4 text-sm">
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Edit"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                          ></path>
+                        </svg>
+                      </button>
+                      <button
+                        class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                        aria-label="Delete"
+                      >
+                        <svg
+                          class="w-5 h-5"
+                          aria-hidden="true"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr class="text-gray-700 dark:text-gray-400">
+                  <td class="px-4 py-3 text-sm">
+                      <!-- Stt/ id-->
+                  <h2 class="text-pi"> 5 </h2>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                      <!-- MSV-->
+                      <h2 class="text-purple-800"> 2000345 </h2>
+                    </td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center text-sm">
+                    <!-- Avatar with inset shadow -->
+                    <div
+                      class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
+                    >
+                      <img
+                        class="object-cover w-full h-full rounded-full"
+                        src="https://cdn.tgdd.vn/Files/2021/04/16/1343844/tim-hieu-ve-giong-cho-shiba-nguon-goc-dac-diem-cach-nuoi-bang-gia-202201102126466874.jpeg"
+                        alt=""
+                        loading="lazy"
+                      />
+                      <div
+                        class="absolute inset-0 rounded-full shadow-inner"
+                        aria-hidden="true"
+                      ></div>
+                    </div>
+                    <div>
+                      <p class="font-semibold">Công Vinh</p>
+                      <p class="text-xs text-gray-600 ">
+                        Sinh viên
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  <!-- chèn link dô-->
+                </td>
+                <td class="px-4 py-3 text-xs">
+                  <span
+                    class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full dark:text-white dark:bg-orange-600"
+                  >
+                    Pending
+                  </span>
+                </td>
+                <td class="px-4 py-3 text-sm">
+                  10/07/2022
+                </td>
+                <td class="px-4 py-3">
+                  <div class="flex items-center space-x-4 text-sm">
+                    <button
+                      class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 hover:g text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                      aria-label="Edit"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <button
+                      class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                      aria-label="Delete"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+          <div
+            class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+          >
+            <span class="flex items-center col-span-3"></span>
+            <!-- Pagination -->
+            <span class="flex col-span-4 mt-2 sm:mt-auto sm:justify-end">
+              <nav aria-label="Table navigation">
+                <ul class="inline-flex items-center">
+                  <li>
+                    <button
+                      class="px-3 py-1 rounded-md rounded-l-lg focus:outline-none focus:shadow-outline-purple"
+                      aria-label="Previous"
+                    >
+                      <svg
+                        class="w-4 h-4 fill-current"
+                        aria-hidden="true"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </li>
+                  </div>
+                  <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+                    <div class="flex flex-1 justify-between sm:hidden">
+                      <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
+                      <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
+                    </div>
+                    <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                      <div>
+                        <p class="text-sm text-gray-700">
+                          Showing
+                          <span class="font-medium">1</span>
+                          to
+                          <span class="font-medium">10</span>
+                          of
+                          <span class="font-medium">97</span>
+                          results
+                        </p>
+                      </div>
+                      <div>
+                        <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
+                          <a href="#" class="relative inline-flex items-center rounded-l-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                            <span class="sr-only">Previous</span>
+                            <!-- Heroicon name: mini/chevron-left -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                          <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                          <a href="#" aria-current="page" class="relative z-10 inline-flex items-center border border-purple-500 bg-indigo-50 px-4 py-2 text-sm font-medium text-purple-600 focus:z-20">1</a>
+                          <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">2</a>
+                          <a href="#" class="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex">3</a>
+                          <span class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700">...</span>
+                          <a href="#" class="relative hidden items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 md:inline-flex">8</a>
+                          <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">9</a>
+                          <a href="#" class="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">10</a>
+                          <a href="#" class="relative inline-flex items-center rounded-r-md border border-gray-300 bg-white px-2 py-2 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20">
+                            <span class="sr-only">Next</span>
+                            <!-- Heroicon name: mini/chevron-right -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd" />
+                            </svg>
+                          </a>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>                  
+
+      <!-- <div id="Pagination">
+        <div class="
+        flex
+        border border-[#e4e4e4]
+        bg-white
+        p-4
+        rounded-xl
+        justify-center
+        ">
+        <ul class="flex items-center -mx-[6px] justify-center">
+          <li class="px-[6px]">
+              <a href="javascript:void(0)" class="
+                w-9
+                h-9
+                flex
+                items-center
+                justify-center
+                rounded-md
+                border border-[#EDEFF1]
+                text-[#838995] text-base
+                hover:bg-primary hover:border-primary hover:text-white
+                ">
+                <span>
+                    <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                      <path d="M7.12979 1.91389L7.1299 1.914L7.1344 1.90875C7.31476 1.69833 7.31528 1.36878 7.1047 1.15819C7.01062 1.06412 6.86296 1.00488 6.73613 1.00488C6.57736 1.00488 6.4537 1.07206 6.34569 1.18007L6.34564 1.18001L6.34229 1.18358L0.830207 7.06752C0.830152 7.06757 0.830098 7.06763 0.830043 7.06769C0.402311 7.52078 0.406126 8.26524 0.827473 8.73615L0.827439 8.73618L0.829982 8.73889L6.34248 14.6014L6.34243 14.6014L6.34569 14.6047C6.546 14.805 6.88221 14.8491 7.1047 14.6266C7.30447 14.4268 7.34883 14.0918 7.12833 13.8693L1.62078 8.01209C1.55579 7.93114 1.56859 7.82519 1.61408 7.7797L1.61413 7.77975L1.61729 7.77639L7.12979 1.91389Z" stroke-width="0.3"></path>
+                    </svg>
+                </span>
+              </a>
+          </li>
+          <li class="px-[6px]">
+              <a href="javascript:void(0)" class="
+                w-9
+                h-9
+                flex
+                items-center
+                justify-center
+                rounded-md
+                border border-[#EDEFF1]
+                text-[#838995] text-base
+                hover:bg-primary hover:border-primary hover:text-white
+                ">
+              1
+              </a>
+          </li>
+          <li class="px-[6px]">
+              <a href="javascript:void(0)" class="
+                w-9
+                h-9
+                flex
+                items-center
+                justify-center
+                rounded-md
+                border border-[#EDEFF1]
+                text-[#838995] text-base
+                hover:bg-primary hover:border-primary hover:text-white
+                ">
+              2
+              </a>
+          </li>
+          <li class="px-[6px]">
+              <a href="javascript:void(0)" class="
+                w-9
+                h-9
+                flex
+                items-center
+                justify-center
+                rounded-md
+                border border-[#EDEFF1]
+                text-[#838995] text-base
+                hover:bg-primary hover:border-primary hover:text-white
+                ">
+              3
+              </a>
+          </li>
+          <li class="px-[6px]">
+              <a href="javascript:void(0)" class="
+                w-9
+                h-9
+                flex
+                items-center
+                justify-center
+                rounded-md
+                border border-[#EDEFF1]
+                text-[#838995] text-base
+                hover:bg-primary hover:border-primary hover:text-white
+                ">
+              4
+              </a>
+          </li>
+
+          <li class="px-[6px]">
+            <a href="javascript:void(0)" class="
+              w-9
+              h-9
+              flex
+              items-center
+              justify-center
+              rounded-md
+              border border-[#EDEFF1]
+              text-[#838995] text-base
+              hover:bg-primary hover:border-primary hover:text-white
+              ">
+            ...
+            </a>
+        </li>
+          <li class="px-[6px]">
+              <a href="javascript:void(0)" class="
+                w-9
+                h-9
+                flex
+                items-center
+                justify-center
+                rounded-md
+                border border-[#EDEFF1]
+                text-[#838995] text-base
+                hover:bg-primary hover:border-primary hover:text-white
+                ">
+                <span>
+                    <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                      <path d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z" stroke-width="0.3"></path>
+                    </svg>
+                </span>
+              </a>
+          </li>
+        </ul>
+      </div>
+                  <li>
+                    <button
+                      class="px-3 py-1 rounded-md rounded-r-lg focus:outline-none focus:shadow-outline-purple"
+                      aria-label="Next"
+                    >
+                      <svg
+                        class="w-4 h-4 fill-current"
+                        aria-hidden="true"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"
+                          fill-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+            </span>
+          </div>
+        </div>
+      </div> -->
+    </main>
+   </div>
+  </div>
+ </body>
+</html> 
