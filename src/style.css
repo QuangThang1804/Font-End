@@ -25,7 +25,7 @@
 .mh-posts-list-item {
     padding-bottom: 20px;
     margin-top: 20px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px dotted #ebebeb;
 }
 
 .clearfix {
@@ -145,7 +145,7 @@ h3 {
 
 
 
- /* view page */
+/* view page */
 .page {
     direction: ltr;
     /* width: 816px; */
@@ -165,8 +165,16 @@ h3 {
     padding: 32px 0;
 }
 
-.max-w-60 {
-    max-width: 60%;
+.max-w-50 {
+    max-width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-50 {
+    width: 50%;
 }
 
 .w-30{
@@ -175,10 +183,71 @@ h3 {
 
 .border-t-1 {
     border-top: 1px solid #ccc;
+}
+
+.border-b-1 {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+/* header */
+
+.bg-header {
+    background-color: #dee5e7;
+}
+
+.shadow-header {
+    box-shadow: 0 10px 10px rgb(0 0 0 / 5%);
+    
+}
+
+/* css đề thi */
+
+.Khoa {
+    margin: 16px 0;
+}
+
+.button-phan-loai {
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0px 12px;
     border-bottom: 1px solid #ccc;
 }
 
-.text-lg {
-    font-size: 1.75rem;
-    line-height: 1.75rem;
+.Ten-khoa {
+    padding: 6px 12px;
+}
+
+.icon-down {
+    margin: 0 4px;
+}
+
+.Ten-khoa:hover {
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.Ten-khoa:hover .cac-nganh {
+    display: block;
+} 
+
+.cac-nganh {
+    display: none;
+}
+
+.nganh {
+    padding: 2px 20px;
+}
+
+.nganh:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.cac-nganh:hover {
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background-color: white;
+    /* border-radius: 8px; */
 }
