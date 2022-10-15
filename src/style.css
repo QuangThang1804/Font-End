@@ -262,7 +262,7 @@ h3 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
 body{
   /* display: flex; */
@@ -281,7 +281,7 @@ body{
   background: #fff;
   border-radius: 10px;
   transition: height 0.2s ease;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12); */
 }
 .status .active{
   height: 590px;
