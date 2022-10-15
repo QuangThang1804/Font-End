@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./new.html","./register.html","./gvPage/instruct.html","./creat.html","grade.html","./home.html", "./test.html","./index.html", "./svPage.html", "./gvPage.html", "./adminPage", "./login.html", "./ViewerPage.html"],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: '', // or 'class'
   theme: {
     screens: {
       sm: '640px',
