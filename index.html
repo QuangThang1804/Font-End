@@ -9,16 +9,16 @@
   <title>Web for team 3</title>
 </head>
 
-<body>
+<body class ="bg-slate-200">
   <!-- Begin header -->
   <!-- component -->
   <div>
     <header>
-      <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 pt-3 dark:bg-gray-800">
+      <nav class="header bg-white border-gray-200 px-4 lg:px-6 py-2.5 pt-3 dark:bg-white shadow-header">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <a href="#" class="flex items-center">
             <img src="./src/img/logo-hus.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HUS</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-blue-900">HUS</span>
           </a>
           <div class="flex items-center lg:order-2">
             <!-- search button -->
@@ -29,9 +29,9 @@
 
                 <form action="" class="relative mx-auto w-max">
                   <input type="search"
-                    class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border pl-12 outline-none text-white focus:w-full focus:cursor-text focus:border-gray-400 focus:pl-16 focus:pr-4 bg-transparent " />
+                    class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border pl-12 outline-none text-gray-800 focus:w-full focus:cursor-text focus:border-gray-400 focus:pl-16 focus:pr-4 bg-transparent " />
                   <svg xmlns="http://www.w3.org/2000/svg"
-                    class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent text-white px-3.5 peer-focus:border-white peer-focus:text-white"
+                    class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent text-black px-3.5 peer-focus:border-white peer-focus:text-gray-800"
                     fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round"
                       d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -41,11 +41,12 @@
             </div>
 
             <a href="#"
-              class="before-login text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Log
+              class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Log
               in
             </a>
-            
-            <img class="after-login w-10 h-10 rounded-full hidden" src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
+              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
 
             <button data-collapse-toggle="mobile-menu-2" type="button"
               class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -71,32 +72,33 @@
                   aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Nghiên cứu khoa học</a>
+                <a id="buttonNCKH"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Nghiên
+                  cứu khoa học</a>
+              </li>
+              <li>
+                <a id="buttonDeThi"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Đề
+                  Thi</a>
               </li>
               <li>
                 <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Đề Thi</a>
+                  class="block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Các
+                  Trường</a>
               </li>
               <li>
                 <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Các Trường</a>
+                  class="block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
               </li>
               <li>
                 <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                  class="block py-2 pr-4 pl-3 text-blue-900 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-
-
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
   </div>
 
@@ -104,11 +106,11 @@
   <!-- Begin Container -->
   <div id="Container">
     <!-- User menu 1 -->
-    <div class="div" style="height: 1000px ; background-color: black;">
+    <div class="div max-w-max bg-transparent">
       <body class="font-poppins antialiased">
         <div
           id="view"
-          class="h-full max-w-xs flex flex-row float-right"
+          class="h-full max-w-xs flex flex-row float-right hidden"
           x-data="{ sidenav: true }"
         >
           <button
@@ -130,17 +132,17 @@
           </button>
           <div
             id="sidebar"
-            class=".bg-canvas-overlay h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out border-l-neutral-500"
+            class="border-solid border-gray-600 border-spacing-px .bg-canvas-overlay h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out border-l-neutral-500"
             x-show="sidenav"
             @click.away="sidenav = false"
           >
             <div class="space-y-6 md:space-y-10 mt-10">
-              <h1 class="font-bold text-4xl text-center md:hidden">
+              <!-- <h1 class="font-bold text-4xl text-center md:hidden">
                 D<span class="text-teal-600">.</span>
               </h1>
               <h1 class="hidden md:block font-bold text-sm md:text-xl text-center text-white">
                 Dashwind<span class="text-teal-600">.</span>
-              </h1>
+              </h1> -->
               <div id="profile" class="space-y-3">
                 <img
                   src="./src/img/Avatar-Facebook-trắng.jpg"
@@ -253,17 +255,8 @@
                   href=""
                   class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
                 >
-                  <svg
-                    class="w-6 h-6 fill-current inline-block"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"
-                    ></path>
-                  </svg>
-                  <span class="">Something =))</span>
+                  <i class=" buttonLogout fa-solid fa-arrow-right-from-bracket w-7 h-7 fill-current inline-block px-1"></i>
+                  <span class="">Log Out</span>
                 </a>
                 
               </div>
@@ -282,81 +275,224 @@
         </script>
       </body>
   
-  <!--Begin Content -->
-      <div class="dieu-huong float-left w-1/4 bg-black max-h-screen" style="height: 1000px"></div>    
+    <!--Begin Content -->
+      <div class="dieu-huong float-left w-1/4 max-h-screen" style="height: 1000px">
+      </div>    
 
-      <article class="mh-posts-list-item clearfix post-9910 post type-post status-publish format-standard hentry mx-3 w-1/2 float-left text-white">
-        <figure class="mh-posts-list-thumb" style="width: 16%">
-            <img src="./src/img/logo-hus.png" alt="">
-        </figure>
-        <div class="mh-posts-list-content clearfix">
-            <header class="mh-posts-list-header">
-                <h3 class="entry-title mh-posts-list-title">
-                    <a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS" rel="bookmark" class="text-white">
-                        Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS				</a>
-                </h3>
-                <div class="mh-meta entry-meta">
-                <span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="https://tailieuvnu.com/2022/07/">09/07/2022</a></span>
-                <span class="entry-meta-comments"><i class="fa-light fa-comment"></i><a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/#respond" class="mh-comment-count-link" >0</a></span>
-                </div>
-            </header>
-            <div class="mh-posts-list-excerpt clearfix">
-                <div class="mh-excerpt"><p>Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS Đề thi Cơ sở hóa học vật liệu đề số 1 kỳ 1 năm học <a class="mh-excerpt-more" href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS">[&#8230;]</a></p></div>		</div>
+      <div class="DeThi">
+
+        <article class="bg-white p-4 rounded-2xl mh-posts-list-item clearfix post-9910 post type-post status-publish format-standard hentry mx-3 w-1/2 float-left text-white">
+          <figure class="mh-posts-list-thumb" style="width: 16%">
+              <img src="./src/img/logo-hus.png" alt="">
+          </figure>
+          <div class="mh-posts-list-content clearfix">
+              <header class="mh-posts-list-header">
+                  <h3 class="entry-title mh-posts-list-title">
+                    <!-- <iframe src="https://drive.google.com/file/d/1d6ma3NXn8Rt-5CTD-AnPl8T6jsvd1KbR/preview" width="640" height="480" allow="autoplay"></iframe> -->
+                      <a href="#Trang chứa bài viết" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS" rel="bookmark" class="text-gray-800">
+                          Đề thi và đáp án tham khảo môn Giải Tích 1 – HUS				</a>
+                  </h3>
+                  <div class="mh-meta entry-meta">
+                  <span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="https://tailieuvnu.com/2022/07/">09/07/2022</a></span>
+                  <span class="entry-meta-comments"><i class="fa-light fa-comment"></i><a href="#" class="mh-comment-count-link" >0</a></span>
+                  </div>
+              </header>
+              <div class="mh-posts-list-excerpt clearfix">
+                  <div class="text-gray-800"><p>Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2 năm học 2021-2022 – HUS Đề thi Cơ sở hóa học vật liệu đề số 1 kỳ 1 năm học <a class="text-gray-800-more" href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS">[&#8230;]</a></p></div>		</div>
+          </div>
+
+        </article>
+  
+        <article class="bg-white p-4 rounded-2xl mh-posts-list-item clearfix post-9910 post type-post status-publish format-standard hentry mx-3 w-1/2 float-left text-gray-800">
+          <figure class="mh-posts-list-thumb" style="width: 16%">
+              <img src="./src/img/logo-hus.png" alt="">
+          </figure>
+          <div class="mh-posts-list-content clearfix">
+              <header class="mh-posts-list-header">
+                  <h3 class="entry-title mh-posts-list-title">
+                      <a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS" rel="bookmark" class="text-gray-800">
+                          Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS				</a>
+                  </h3>
+                  <div class="mh-meta entry-meta">
+                  <span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="https://tailieuvnu.com/2022/07/">09/07/2022</a></span>
+                  <span class="entry-meta-comments"><i class="fa-light fa-comment"></i><a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/#respond" class="mh-comment-count-link" >0</a></span>
+                  </div>
+              </header>
+              <div class="mh-posts-list-excerpt clearfix">
+                  <div class="text-gray-800"><p>Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS Đề thi Cơ sở hóa học vật liệu đề số 1 kỳ 1 năm học <a class="text-gray-800-more" href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS">[&#8230;]</a></p></div>		</div>
+          </div>
+        </article>
+  
+        <article class="bg-white p-4 rounded-2xl mh-posts-list-item clearfix post-9910 post type-post status-publish format-standard hentry mx-3 w-1/2 float-left text-gray-800">
+          <figure class="mh-posts-list-thumb" style="width: 16%">
+              <img src="./src/img/logo-hus.png" alt="">
+          </figure>
+          <div class="mh-posts-list-content clearfix mb-5">
+              <header class="mh-posts-list-header">
+                  <h3 class="entry-title mh-posts-list-title">
+                      <a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS" rel="bookmark" class="text-gray-800">
+                          Đề thi và đáp án tham khảo môn Cơ Nhiệt kỳ 2 năm học 2021-2022 – HUS				</a>
+                  </h3>
+                  <div class="mh-meta entry-meta">
+                  <span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="https://tailieuvnu.com/2022/07/">09/07/2022</a></span>
+                  <span class="entry-meta-comments"><i class="fa-light fa-comment"></i><a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/#respond" class="mh-comment-count-link" >0</a></span>
+                  </div>
+              </header>
+              <div class="mh-posts-list-excerpt clearfix">
+                  <div class="text-gray-800"><p>Đề thi và đáp án tham khảo môn Cơ Nhiệt kỳ 2 năm học 2021-2022 – HUS Đề thi Cơ sở hóa học vật liệu đề số 1 kỳ 1 năm học <a class="text-gray-800-more" href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS">[&#8230;]</a></p></div>		</div>
+          </div>
+
+        </article>
+      </div>
+
+
+      <div class="NCKH hidden">
+        <!-- status -->
+    <div class="viewer shadow-2xl float-left w-full bg-slate-50 rounded-2xl">
+
+      <div class="user1-status my-4">
+        <div class="header-tus">
+          <div class="avatar float-left mx-4">
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+          </div>
+          <div class="name-and-time float-left rounded-3xl pr-1 text-black">
+            <p class="name-user text-start font-semibold text-black">Phạm Văn A</p>
+            <p class="text-black">9 giờ trước</p>
+          </div>
+          <div class="clear"></div>
         </div>
-      </article>
 
-      <article class="mh-posts-list-item clearfix post-9910 post type-post status-publish format-standard hentry mx-3 w-1/2 float-left text-white">
-        <figure class="mh-posts-list-thumb" style="width: 16%">
-            <img src="./src/img/logo-hus.png" alt="">
-        </figure>
-        <div class="mh-posts-list-content clearfix">
-            <header class="mh-posts-list-header">
-                <h3 class="entry-title mh-posts-list-title">
-                    <a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS" rel="bookmark" class="text-white">
-                        Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS				</a>
-                </h3>
-                <div class="mh-meta entry-meta">
-                <span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="https://tailieuvnu.com/2022/07/">09/07/2022</a></span>
-                <span class="entry-meta-comments"><i class="fa-light fa-comment"></i><a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/#respond" class="mh-comment-count-link" >0</a></span>
-                </div>
-            </header>
-            <div class="mh-posts-list-excerpt clearfix">
-                <div class="mh-excerpt"><p>Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS Đề thi Cơ sở hóa học vật liệu đề số 1 kỳ 1 năm học <a class="mh-excerpt-more" href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS">[&#8230;]</a></p></div>		</div>
-        </div>
-      </article>
+        <div class="caption text-start pt-4 px-6 text-xl">Đề thi của Giải Tích 1 năm 2021-2022 Trường Đại học Khoa học Tự Nhiên</div>
+      </div>
 
-      <article class="mh-posts-list-item clearfix post-9910 post type-post status-publish format-standard hentry mx-3 w-1/2 float-left text-white">
-        <figure class="mh-posts-list-thumb" style="width: 16%">
-            <img src="./src/img/logo-hus.png" alt="">
-        </figure>
-        <div class="mh-posts-list-content clearfix">
-            <header class="mh-posts-list-header">
-                <h3 class="entry-title mh-posts-list-title">
-                    <a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS" rel="bookmark" class="text-white">
-                        Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS				</a>
-                </h3>
-                <div class="mh-meta entry-meta">
-                <span class="entry-meta-date updated"><i class="fa fa-clock-o"></i><a href="https://tailieuvnu.com/2022/07/">09/07/2022</a></span>
-                <span class="entry-meta-comments"><i class="fa-light fa-comment"></i><a href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/#respond" class="mh-comment-count-link" >0</a></span>
-                </div>
-            </header>
-            <div class="mh-posts-list-excerpt clearfix">
-                <div class="mh-excerpt"><p>Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS Đề thi Cơ sở hóa học vật liệu đề số 1 kỳ 1 năm học <a class="mh-excerpt-more" href="https://tailieuvnu.com/de-thi-va-dap-an-tham-khao-co-so-hoa-hoc-vat-lieu-ky-2-nam-hoc-2021-2022-hus/" title="Đề thi và đáp án tham khảo Cơ sở hóa học vật liệu kỳ 2 năm học 2021-2022 – HUS">[&#8230;]</a></p></div>		</div>
-        </div>
-      </article>
-
+      <!-- <div class="time-and-school text-start text-gray-200 mb-8">
+            <p class="float-left my-1 text-gray-200 mx-2"><i class="fa-regular fa-clock"></i><a class ="text-gray-200 mx-2" href="">09/07/2022</a></p>
+            <p class="float-left my-1 text-gray-200 mx-2"><i class="fa-regular fa-comment"></i><a class ="text-gray-200 mx-2" href="#">0</a><p>
+            <div class="clear"></div>
+        </div> -->
       <div class="clear"></div>
 
-  <!-- End Content -->
 
+
+      <!--Begin View file -->
+      <div class="view page">
+        <iframe class="inline-flex max-w-full max-h-screen rounded-lg"
+          src="https://drive.google.com/file/d/1d6ma3NXn8Rt-5CTD-AnPl8T6jsvd1KbR/preview" width="100%" height="300px"
+          allow="autoplay"></iframe>
+      </div>
+
+      <div class="reaction max-w-full mx-2 mb-2 border-t-1 ">
+        <div
+          class="like-block float-left w-1/2 py-2 text-center hover:border-opacity-60 hover:cursor-pointer hover:bg-slate-500 rounded-lg">
+
+          <p class="text-black"><i class="fa-regular fa-thumbs-up my-2 mx-2"></i>like</p>
+        </div>
+
+        <div
+          class="comment-block float-left w-1/2 py-2 text-center hover:border-opacity-60 hover:cursor-pointer hover:bg-slate-500 rounded-lg">
+
+          <p class="text-black"><i class="fa-regular fa-comment my-2 mx-2"></i>Comment</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+      <div class="user-comments">
+        <div class="user1-comment my-4">
+          <div class="comment">
+            <div class="avatar float-left mx-4">
+              <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+                src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+            </div>
+            <div class="content-comment float-left bg-slate-300 rounded-3xl px-6 py-1">
+              <p class="name-user text-start font-semibold">Nguyễn Văn B</p>
+              <p class="">Ôi!!! Mình tìm bài này mãi</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div class="user2-comment my-4">
+          <div class="comment">
+            <div class="avatar float-left mx-4">
+              <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+                src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+            </div>
+            <div class="content-comment float-left bg-slate-300 rounded-3xl px-6 py-1">
+              <p class="name-user text-start font-semibold">Phạm Văn A</p>
+              <p class="">Đề này khó quá, ai có cách giải không ạ?</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!--Comment component -->
+      <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" /> -->
+
+      <div class="max-w-full mx- bg-transparent">
+
+        <form>
+          <label for="chat" class="sr-only">Comment</label>
+          <div class="flex items-center py-2 px-3 bg-transparent rounded-lg border-solid border-l-zinc-500">
+            <button type="button"
+              class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <button type="button" class="p-2 text-gray-500 rounded-lg cursor-pointer hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <textarea id="Comment" rows="1"
+              class="block mx-4 p-2.5 w-full text-sm text-gray-800 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Type your comment..."></textarea>
+            <button type="submit"
+              class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 ">
+              <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <!-- <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script> -->
+      </div>
+      <div class="clear"></div>
     </div>
 
+
+
+
+
+
+    <div class="viewer float-left max-w-50">
+      
+    </div>
+
+    <div class="float-left w-1/4"></div>
+    <div class="clear"></div>
+
+      </div>
+      <div class="clear"></div>
+      
+    </div>
+      <!-- End Content -->
+
+      <!-- chân trang chuyển tab -->
       <div id="Pagination">
         <div class="
         flex
         border border-[#e4e4e4]
         bg-white
-        p-4
+        p-2
         rounded-xl
         justify-center
         ">
@@ -477,17 +613,17 @@
           </li>
         </ul>
       </div>
-  <div class="clear"></div>
+  
+      <div class="clear"></div>
 
     </div>
-  <div class="clear"></div>
-</div>
+  </div>
 
   <!-- End Container -->
 
 
   <!-- Begin Footer -->
-  <div class="">
+  <div class="Footer">
 
     <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
     <link rel="stylesheet"
@@ -588,22 +724,56 @@
   <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
 
   <script>
-    const beforeLogin = document.querySelector('.before-login');
-    const afterLogin = document.querySelector('after-login');
+    // bật tắt login, avatar và menu user
+    const buttonLogin = document.querySelector('.buttonLogin');
+    const buttonAvatar = document.querySelector('.buttonAvatar');
+    const buttonLogout = document.querySelector('.buttonLogout');
+    const userMenu = document.querySelector('#view')
     
     function ShowAvatar() {
-      afterLogin.classList.add('open')
+      buttonAvatar.classList.add('open');
+      buttonLogin.classList.add('hidden');
     }
 
-    function HideLogin(){
-      afterLogin.classList.remove('open');
+    function HideAvatar(){
+      buttonAvatar.classList.remove('open');
+      buttonLogin.classList.remove('hidden');
     }
 
-    beforeLogin.addEventListener('click', ShowLogin);
+    buttonLogin.addEventListener('click', ShowAvatar);
 
-    afterLogin.addEventListener('click', HideLogin)
+    buttonLogout.addEventListener('click', HideAvatar);
             
-    modal.addEventListener('click', Hidebuytickets)
+    function ShowUserMenu() {
+      userMenu.classList.add('open');
+    }
+
+    function HideUserMenu() {
+      userMenu.classList.remove('open');
+    }
+
+    buttonAvatar.addEventListener('click', ShowUserMenu)
+
+    // chuyển trang giữa đề thi và nckh
+
+    const buttonDeThi = document.querySelector('#buttonDeThi');
+    const buttonNCKH = document.querySelector('#buttonNCKH');
+
+    const DeThi = document.querySelector('.DeThi');
+    const NCKH = document.querySelector('.NCKH');
+
+    function ShowNCKH() {
+      NCKH.classList.add('open');
+      DeThi.classList.add('hidden');
+    }
+
+    function ShowDeThi() {
+      NCKH.classList.remove('open');
+      DeThi.classList.remove('hidden');
+    }
+
+    buttonDeThi.addEventListener('click', ShowDeThi);
+    buttonNCKH.addEventListener('click', ShowNCKH);
   </script>
 </body>
 
