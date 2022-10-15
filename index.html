@@ -300,33 +300,42 @@
 
     <div class="DeThi">
 
-      <div class="status my-4 w-1/2 bg-white p-4 rounded-2xl pb-5 mt-20 mx-3 w-1/2 float-left text-white">
-        <div class="header-tus">
-          <h1 class="text-center border-b-1 text-xl py-2 ">Đăng bài</h1>
+      <!-- Tạo bài viết -->
+      <div class="">
 
-          <div class="avatar float-left mx-4 my-2">
-            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
-              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
-          </div>
-          <div class="name-and-time float-left rounded-3xl pr-1 text-black my-2">
-            <p class="name-user text-start font-semibold text-black">Phạm Văn A</p>
-            <p class="text-black">public</p>
-          </div>
-          <div class="clear"></div>
-        </div>
-
-        <div class="caption text-start pt-4 px-6 text-xl text-black">
-          <form action="">
-            <input class="border-none " type="text" placeholder="Nhập nội dung bài viết....">
-            <div class="them-file border-status ">
-              <label for="file">Chọn file</label>
-              <input type="file" id="file" name="file" multiple />
-            </div>
+        <div class="status bg-white p-4 rounded-2xl pb-5 mt-20 block mx-3 w-full float-left">
+          <div class="wrapper">
+            <section class="post">
+              <header>Đăng bài</header>
+              <form action="#">
+                <div class="content">
+                  <img class="rounded-3xl" src="./src/img/Avatar-Facebook-trắng.jpg" alt="logo">
+                  <div class="details">
+                    <p>Phạm Quang Thăng</p>
+                    <!-- <div class="privacy">
+                      <i class="fas fa-user-friends"></i>
+                      <span>Friends</span>
+                      <i class="fas fa-caret-down"></i>
+                    </div> -->
+                  </div>
+                </div>
+                <textarea placeholder="Nhập nội dung bài viết của bạn..." spellcheck="false" required></textarea>
+                
+                <div class="options">
+                  <p>Thêm file</p>
+                  <ul class="list mr-14">
+                    <li><img src="./src/icon/link-solid.svg" alt="gallery"></li>
+                    <li><img src="./src/icon/image-regular.svg" alt="gallery"></li>
+                  </ul>
+                </div>
+                <button>Đăng</button>
+              </form>
+            </section>
             
-          </form>
+          </div>
         </div>
       </div>
-
+    
       <article
         class="bg-white p-4 rounded-2xl pb-5 mt-20 block mx-3 w-1/2 float-left">
         <figure class="mh-posts-list-thumb" style="width: 16%">
@@ -362,7 +371,7 @@
       </article>
 
       <article
-        class="bg-white p-4 rounded-2xl mh-posts-list-item mx-3 w-1/2 float-left text-gray-800">
+        class="bg-white p-4 rounded-2xl pb-5 mt-5 mx-3 w-1/2 float-left text-gray-800">
         <figure class="mh-posts-list-thumb" style="width: 16%">
           <img src="./src/img/logo-hus.png" alt="">
         </figure>
@@ -395,7 +404,7 @@
       </article>
 
       <article
-        class="bg-white p-4 rounded-2xl mh-posts-list-item mx-3 w-1/2 float-left text-gray-800">
+        class="bg-white p-4 rounded-2xl pb-5 mt-5 mx-3 w-1/2 float-left text-gray-800">
         <figure class="mh-posts-list-thumb" style="width: 16%">
           <img src="./src/img/logo-hus.png" alt="">
         </figure>

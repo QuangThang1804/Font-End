@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="new.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- FontAweome CDN Link for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
   <body>
-    <div class="container">
+    <div class="status">
       <div class="wrapper">
         <section class="post">
-          <header>Create Post</header>
+          <header>Đăng bài</header>
           <form action="#">
             <div class="content">
-              <img class="rounded-2xl" src="./src/img/Avatar-Facebook-trắng.jpg" alt="logo">
+              <img class="rounded-3xl" src="./src/img/Avatar-Facebook-trắng.jpg" alt="logo">
               <div class="details">
                 <p>Phạm Quang Thăng</p>
                 <!-- <div class="privacy">
@@ -31,32 +29,18 @@
             <textarea placeholder="Nhập nội dung bài viết của bạn..." spellcheck="false" required></textarea>
             
             <div class="options">
-              <p>Add to Your Post</p>
+              <p>Thêm file</p>
               <ul class="list mr-14">
                 <li><img src="./src/icon/link-solid.svg" alt="gallery"></li>
                 <li><img src="./src/icon/image-regular.svg" alt="gallery"></li>
               </ul>
             </div>
-            <button>Post</button>
+            <button>Đăng</button>
           </form>
         </section>
         
       </div>
     </div>
-
-    <script>
-      const container = document.querySelector(".container"),
-      privacy = container.querySelector(".post .privacy"),
-      arrowBack = container.querySelector(".audience .arrow-back");
-
-      privacy.addEventListener("click", () => {
-        container.classList.add("active");
-      });
-
-      arrowBack.addEventListener("click", () => {
-        container.classList.remove("active");
-      });
-    </script>
     
   </body>
 </html>
