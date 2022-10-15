@@ -25,7 +25,6 @@
 .mh-posts-list-item {
     padding-bottom: 20px;
     margin-top: 20px;
-    border-bottom: 1px dotted #ebebeb;
 }
 
 .clearfix {
@@ -250,4 +249,8 @@ h3 {
     border-left: 1px solid #ccc;
     background-color: white;
     /* border-radius: 8px; */
+}
+
+.border-status {
+    border: 1px 0 #fff;
 }

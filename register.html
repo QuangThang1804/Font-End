@@ -5,12 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/output.css">
-    <link rel="stylesheet" href="./src/style.css">
-    <title>login</title>
+    <title>register</title>
 </head>
 <body>
-    <!-- component -->
-    <!-- Đăng ký -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
 
@@ -26,21 +23,37 @@
                 </div>
                 <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
                     <div class="text-center mb-10">
-                        <h1 class="font-bold text-3xl text-gray-900">LOGIN</h1>
-                        <p>Enter your account to login</p>
+                        <h1 class="font-bold text-3xl text-gray-900">Đăng ký</h1>
+                        <p>Điền thông tin của bạn để đăng ký</p>
                     </div>
                     <div>
+                        <div class="flex -mx-3">
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Họ</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Nguyễn">
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Tên</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Văn A">
+                                </div>
+                            </div>
+                        </div>
                         <div class="flex -mx-3">
                             <div class="w-full px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">Email</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                    <input type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="NguyenVanA@example.com" required>
+                                    <input type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="NguyenVanA@example.com">
                                 </div>
                             </div>
                         </div>
                         <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-12">
+                            <div class="w-full px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">Mật khẩu</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
@@ -50,7 +63,27 @@
                         </div>
                         <div class="flex -mx-3">
                             <div class="w-full px-3 mb-5">
-                                <a href="index.html" class="text-center block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">Đăng Nhập</a>
+                                <label for="" class="text-xs font-semibold px-1">Nhập lại mật khẩu</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
+                                    <input type="password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-12">
+                                <label for="" class="text-xs font-semibold px-1">Đăng ký làm...</label>
+                                <div class="flex">
+                                    <input type="checkbox" class=" text-xl w-4 pr-1 ml-1 mr-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" > Giảng viên
+                                    <input type="checkbox" class=" text-xl w-4 pr-1 ml-6 mr-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" > Sinh viên
+                                    <div class="clear"></div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <a href="login.html" class="text-center block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">Đăng ký ngay</a>
                             </div>
                         </div>
                     </div>
@@ -58,5 +91,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
