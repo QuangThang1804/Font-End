@@ -112,7 +112,7 @@
     <div class="py-4 text-gray-500 dark:text-gray-400">
       
       <ul class="mt-6">
-        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-blue-700 hover:text-white">
           <a
             class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
             href="index.html"
@@ -136,7 +136,7 @@
         </li>
       </ul>
       <ul>
-        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-blue-700 hover:text-white">
           <a
             class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
             href="svPage.html"
@@ -159,7 +159,7 @@
           </a>
         </li>
 
-        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-blue-700 hover:text-white">
           <a
             class="inline-flex items-center justify-start w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
             href="gvPage.html"
@@ -183,7 +183,7 @@
         </li>
 
 
-        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-purple-700 hover:text-white">
+        <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-blue-700 hover:text-white">
           <button
             class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-white dark:hover:text-gray-200"
             @click="togglePagesMenu"
@@ -211,12 +211,56 @@
         </li>
       </ul>
       <div class="px-6 my-6">
-        <button
-          class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
-        >
-          Create account
-          <span class="ml-2" aria-hidden="true">+</span>
-        </button>
+            <button type="button"
+                    lass="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                    aria-controls="dropdown1-example" data-collapse-toggle="dropdown1-example"
+                    class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-400 hover:bg-blue-700 focus:outline-none focus:shadow-outline-purple"
+                    >
+                Tạo đề tài
+                <span class="ml-2" aria-hidden="true">+</span>
+                </svg>
+            </button>
+            <ul id="dropdown1-example" class="hidden py-2 space-y-2">
+                <li class="px-6">
+                    <a href="instruct.html"
+                       class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-indigo-200 dark:text-white dark:hover:bg-gray-700">Đề
+                        Đề thi</a>
+                        <div class="status-modal bg-white p-4 rounded-2xl pb-5 mt-5 block mx-3 hidden">
+                            <div class="status">
+                              <div class="wrapper">
+                                <section class="post">
+                                  <header>Đăng bài</header>
+                                  <form action="#">
+                                    <div class="content">
+                                      <img class="rounded-3xl" src="./src/img/Avatar-Facebook-trắng.jpg" alt="logo">
+                                      <div class="details">
+                                        <p>Phạm Quang Thăng</p>
+                    
+                                      </div>
+                                    </div>
+                                    <textarea placeholder="Nhập nội dung bài viết của bạn..." spellcheck="false" required></textarea>
+                    
+                                    <div class="options">
+                                      <p>Thêm file</p>
+                                      <ul class="list mr-6">
+                                        <li><img src="./src/icon/link-solid.svg" alt="gallery">
+                                        </li>
+                                        <li><img src="./src/icon/image-regular.svg" alt="gallery"></li>
+                                      </ul>
+                                    </div>
+                                    <button>Đăng</button>
+                                  </form>
+                                </section>
+                              </div>
+                            </div>
+                          </div>
+                </li>
+                <li class="px-6">
+                    <a href="create.html"
+                       class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-indigo-200 dark:text-white dark:hover:bg-gray-700">Đề
+                        Nghiên cứu khoa học</a>
+                </li>
+            </ul>
       </div>
     </div>
   </aside>
@@ -355,7 +399,7 @@
       <div class="container grid px-6 mx-auto">        
       <!-- With actions -->
         <h4
-          class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
+          class="mb-4 mt-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
         >
           Table with actions
         </h4>
