@@ -8,78 +8,81 @@
     <link href="/dist/output.css" rel="stylesheet">
     <link href="./src/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Trang Giảng viên</title>
 </head>
 
 <body>
-<!-- Viết giao diện content ở đây nhé ^_^ -->
-<div class="app">
-    <header class="h-1/5">
-        <nav class="bg-white border-gray-400 px-4 lg:px-6 py-2 dark:bg-gray-800">
-            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a href="http://hus.vnu.edu.vn/" class="flex items-center">
-                    <img src="./src/img/logo-hus.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo"/>
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">HUS</span>
-                </a>
-                <form class="flex items-center">
-                    <label for="simple-search" class="sr-only">Search</label>
-                    <div class="relative w-full">
-                        <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                                      clip-rule="evenodd"></path>
-                            </svg>
+    <!-- Viết giao diện content ở đây nhé ^_^ -->
+    <div class="app">
+        <header class="h-1/5">
+            <nav class="bg-white border-gray-400 px-4 lg:px-6 py-2 dark:bg-gray-800">
+                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                    <a href="#" class="flex items-center">
+                        <img src="./src/img/connectdevelop.svg" class="mr-2 h-6 sm:h-9" alt="Logo" />
+                        <span
+                            class="self-center text-xl font-semibold whitespace-nowrap dark:text-blue-900 uppercase">Thư
+                            viện tài
+                            liệu</span>
+                    </a>
+                    <form class="flex items-center">
+                        <label for="simple-search" class="sr-only">Search</label>
+                        <div class="relative w-full">
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <input type="text" id="simple-search"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-500 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="Search" required>
                         </div>
-                        <input type="text" id="simple-search"
-                               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-500 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="Search" required>
-                    </div>
-                    <button type="submit"
+                        <button type="submit"
                             class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                        <span class="sr-only">Search</span>
-                    </button>
-                </form>
-                <div class="flex items-center">
-                    <ul class="flex items-center">
-                        <li class="px-4 items-end">
-                            <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </form>
+                    <div class="flex items-center">
+                        <ul class="flex items-center">
+                            <li class="px-4 items-end">
+                                <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
                                     class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
                                     type="button">
-                                <svg class="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <path
+                                    <svg class="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
                                             d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z">
-                                    </path>
-                                </svg>
-                                <!-- <div class="flex relative">
+                                        </path>
+                                    </svg>
+                                    <!-- <div class="flex relative">
                                     <div
                                         class="inline-flex relative -top-2 right-3 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-gray-900">
                                     </div>
                                 </div> -->
-                            </button>
-                            <!-- Dropdown menu -->
-                            <div id="dropdownNotification"
-                                 class="hidden z-20 w-40 max-w-sm bg-white border-gray-700 rounded divide-y divide-gray-100 shadow dark:bg-gray-800 dark:divide-gray-700"
-                                 aria-labelledby="dropdownNotificationButton">
-                                <div
+                                </button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNotification"
+                                    class="hidden z-20 w-40 max-w-sm bg-white border-gray-700 rounded divide-y divide-gray-100 shadow dark:bg-gray-800 dark:divide-gray-700"
+                                    aria-labelledby="dropdownNotificationButton">
+                                    <div
                                         class="block py-2 px-4 font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-800 dark:text-white">
-                                    Thông báo
-                                </div>
-                                <div class="divide-y divide-gray-100 dark:divide-gray-700">
-                                    <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        <div class="flex-shrink-0">
-                                            <img class="w-10 h-10 rounded-full" src="./src/img/logo-hus.png"
-                                                 alt="Jese image">
-                                            <!-- <div
+                                        Thông báo
+                                    </div>
+                                    <div class="divide-y divide-gray-100 dark:divide-gray-700">
+                                        <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            <div class="flex-shrink-0">
+                                                <img class="w-10 h-10 rounded-full"
+                                                    src="./src/img/Avatar-Facebook-trắng.jpg" alt="Jese image">
+                                                <!-- <div
                                                 class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-blue-600 rounded-full border border-white dark:border-gray-800">
                                                 <svg class="w-3 h-3 text-white" aria-hidden="true"
                                                     fill="currentColor" viewBox="0 0 20 20"
@@ -92,21 +95,21 @@
                                                     </path>
                                                 </svg>
                                             </div> -->
-                                        </div>
-                                        <div class="pl-3 w-full">
-                                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-                                                    class="font-semibold text-gray-900 dark:text-white">aaa</span>
-                                                đã thích bài viết của bạn
                                             </div>
-                                            <div class="text-xs text-blue-600 dark:text-blue-500">vài giây trước
+                                            <div class="pl-3 w-full">
+                                                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                                        class="font-semibold text-gray-900 dark:text-white">aaa</span>
+                                                    đã thích bài viết của bạn
+                                                </div>
+                                                <div class="text-xs text-blue-600 dark:text-blue-500">vài giây trước
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        <div class="flex-shrink-0">
-                                            <img class="w-10 h-10 rounded-full" src="./src/img/logo-hus.png"
-                                                 alt="Joseph image">
-                                            <!-- <div
+                                        </a>
+                                        <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            <div class="flex-shrink-0">
+                                                <img class="w-10 h-10 rounded-full"
+                                                    src="./src/img/Avatar-Facebook-trắng.jpg" alt="Joseph image">
+                                                <!-- <div
                                                 class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-800">
                                                 <svg class="w-3 h-3 text-white" aria-hidden="true"
                                                     fill="currentColor" viewBox="0 0 20 20"
@@ -116,21 +119,21 @@
                                                     </path>
                                                 </svg>
                                             </div> -->
-                                        </div>
-                                        <div class="pl-3 w-full">
-                                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-                                                    class="font-semibold text-gray-900 dark:text-white">bbb</span>
-                                                đã bình luận về bài viết của bạn
                                             </div>
-                                            <div class="text-xs text-blue-600 dark:text-blue-500">10 phút trước
+                                            <div class="pl-3 w-full">
+                                                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                                        class="font-semibold text-gray-900 dark:text-white">bbb</span>
+                                                    đã bình luận về bài viết của bạn
+                                                </div>
+                                                <div class="text-xs text-blue-600 dark:text-blue-500">10 phút trước
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        <div class="flex-shrink-0">
-                                            <img class="w-10 h-10 rounded-full" src="./src/img/logo-hus.png"
-                                                 alt="Leslie image">
-                                            <!-- <div
+                                        </a>
+                                        <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                            <div class="flex-shrink-0">
+                                                <img class="w-10 h-10 rounded-full"
+                                                    src="./src/img/Avatar-Facebook-trắng.jpg" alt="Leslie image">
+                                                <!-- <div
                                                 class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-800">
                                                 <svg class="w-3 h-3 text-white" aria-hidden="true"
                                                     fill="currentColor" viewBox="0 0 20 20"
@@ -140,179 +143,180 @@
                                                         clip-rule="evenodd"></path>
                                                 </svg>
                                             </div> -->
-                                        </div>
-                                        <div class="pl-3 w-full">
-                                            <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
-                                                    class="font-semibold text-gray-900 dark:text-white">ccc</span>
-                                                đã đăng một bài viết mới
                                             </div>
-                                            <div class="text-xs text-blue-600 dark:text-blue-500">1 giờ trước</div>
+                                            <div class="pl-3 w-full">
+                                                <div class="text-gray-500 text-sm mb-1.5 dark:text-gray-400"><span
+                                                        class="font-semibold text-gray-900 dark:text-white">ccc</span>
+                                                    đã đăng một bài viết mới
+                                                </div>
+                                                <div class="text-xs text-blue-600 dark:text-blue-500">1 giờ trước</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <a href="#"
+                                        class="block py-2 text-sm font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
+                                        <div class="inline-flex items-center ">
+                                            <svg class="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400"
+                                                aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                <path fill-rule="evenodd"
+                                                    d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                            View all
                                         </div>
                                     </a>
                                 </div>
-                                <a href="#"
-                                   class="block py-2 text-sm font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white">
-                                    <div class="inline-flex items-center ">
-                                        <svg class="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400"
-                                             aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                                            <path fill-rule="evenodd"
-                                                  d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                                                  clip-rule="evenodd"></path>
-                                        </svg>
-                                        View all
+                            </li>
+                            <li class="px-4">
+                                <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown"
+                                    data-dropdown-placement="bottom-start" class="w-9 h-9 rounded-full cursor-pointer"
+                                    src="./src/img/Avatar-Facebook-trắng.jpg" alt="User dropdown">
+
+                                <!-- Dropdown menu -->
+                                <div id="userDropdown"
+                                    class="hidden z-10 w-44 bg-white border-gray-700 rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+                                    <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
+                                        <div>abc</div>
                                     </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="px-4">
-                            <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown"
-                                 data-dropdown-placement="bottom-start" class="w-9 h-9 rounded-full cursor-pointer"
-                                 src="./src/img/logo-hus.png" alt="User dropdown">
-
-                            <!-- Dropdown menu -->
-                            <div id="userDropdown"
-                                 class="hidden z-10 w-44 bg-white border-gray-700 rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-                                <div class="py-3 px-4 text-sm text-gray-900 dark:text-white">
-                                    <div>abc</div>
+                                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="avatarButton">
+                                        <li>
+                                            <a href="#"
+                                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông
+                                                tin cá nhân</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Đăng
+                                                xuất</a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200"
-                                    aria-labelledby="avatarButton">
-                                    <li>
-                                        <a href="#"
-                                           class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông
-                                            tin cá nhân</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"
-                                           class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Đăng
-                                            xuất</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <div class="flex">
-        <aside class="flex w-1/6 px-3 py-3" aria-label="Sidebar">
-            <div class="overflow-y-auto bg-gray-200 rounded dark:bg-gray-800">
-                <ul class="space-y-2">
-                    <li>
-                        <a href="index.html"
-                           class="flex items-center p-2 text-base font-normal text-gray-700 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
-                            </svg>
-                            <span class="ml-3 px-3">Trang chủ</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="create.html"
-                           class="flex items-center p-2 text-base font-normal text-gray-700 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                 class="w-5 h-5  text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"/>
-                            </svg>
-                            <span class="ml-3 px-3">Tạo một đề tài nghiên cứu khoa học</span>
-                        </a>
-                    </li>
-                    <li>
-                        <button type="button"
+        <div class="flex">
+            <aside class="flex w-1/6 px-3 py-3" aria-label="Sidebar">
+                <div class="overflow-y-auto bg-gray-200 rounded dark:bg-gray-800">
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="index.html"
+                                class="flex items-center p-2 text-base font-normal text-gray-700 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                                <span class="ml-3 px-3">Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="create.html"
+                                class="flex items-center p-2 text-base font-normal text-gray-700 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                    class="w-5 h-5  text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                                </svg>
+                                <span class="ml-3 px-3">Tạo một đề tài nghiên cứu khoa học</span>
+                            </a>
+                        </li>
+                        <li>
+                            <button type="button"
                                 class="flex items-center p-2 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                                 aria-controls="dropdown1-example" data-collapse-toggle="dropdown1-example">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke-width="1.5" stroke="currentColor"
-                                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"/>
-                            </svg>
-                            <span class="flex-1 ml-3 px-3 text-left whitespace-nowrap" sidebar-toggle-item>Đề tài
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                                </svg>
+                                <span class="flex-1 ml-3 px-3 text-left whitespace-nowrap" sidebar-toggle-item>Đề tài
                                     hướng dẫn</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke-width="1.5" stroke="currentColor" sidebar-toggle-item class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M19.5 8.25l-7.5 7.5-7.5-7.5" clip-rule="evenodd">
-                                </path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown1-example" class="hidden py-2 space-y-2">
-                            <li class="px-6">
-                                <a href="instruct.html"
-                                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
-                                    tài 1</a>
-                            </li>
-                            <li class="px-6">
-                                <a href="instruct.html"
-                                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
-                                    tài 2</a>
-                            </li>
-                            <li class="px-6">
-                                <a href="instruct.html"
-                                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
-                                    tài 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <button type="button"
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" sidebar-toggle-item class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M19.5 8.25l-7.5 7.5-7.5-7.5" clip-rule="evenodd">
+                                    </path>
+                                </svg>
+                            </button>
+                            <ul id="dropdown1-example" class="hidden py-2 space-y-2">
+                                <li class="px-6">
+                                    <a href="instruct.html"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
+                                        tài 1</a>
+                                </li>
+                                <li class="px-6">
+                                    <a href="instruct.html"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
+                                        tài 2</a>
+                                </li>
+                                <li class="px-6">
+                                    <a href="instruct.html"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
+                                        tài 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <button type="button"
                                 class="flex items-center p-2 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                                 aria-controls="dropdown2-example" data-collapse-toggle="dropdown2-example">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke-width="1.5" stroke="currentColor"
-                                 class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                      d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"/>
-                            </svg>
-                            <span class="flex-1 ml-3 px-3 text-left whitespace-nowrap" sidebar-toggle-item>Đề tài
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                                </svg>
+                                <span class="flex-1 ml-3 px-3 text-left whitespace-nowrap" sidebar-toggle-item>Đề tài
                                     chấm điểm</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                 stroke-width="1.5" stroke="currentColor" sidebar-toggle-item class="w-6 h-6">
-                                <path fill-rule="evenodd" d="M19.5 8.25l-7.5 7.5-7.5-7.5" clip-rule="evenodd">
-                                </path>
-                            </svg>
-                        </button>
-                        <ul id="dropdown2-example" class="hidden py-2 space-y-2">
-                            <li class="px-6">
-                                <a href="grade.html"
-                                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
-                                    tài 4</a>
-                            </li>
-                            <li class="px-6">
-                                <a href="grade.html"
-                                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
-                                    tài 5</a>
-                            </li>
-                            <li class="px-6">
-                                <a href="grade.html"
-                                   class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
-                                    tài 6</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-        <div class="flex-col w-5/6 md:w-5/6 sm:w-5/6 px-3 py-3">
-            <div class="card">
-                <div class="card-header font-bold">Hướng dẫn đề tài nghiên cứu</div>
-                <div class="card-body">
-                    <div class="font-normal row">
-                        <div class="font-semibold col-lg-2">Tên đề tài:</div>
-                        <div class="col-lg-10"> Sóng trong các môi trường đàn hồi và thuần nhất hóa biên phân chia độ
-                            nhám cao
-                        </div>
-                        <div class="col-lg-10 font-semibold">Tóm tắt nội dung đề tài:</div>
-                        <textarea class="col-lg-12" id="abstract">Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" sidebar-toggle-item class="w-6 h-6">
+                                    <path fill-rule="evenodd" d="M19.5 8.25l-7.5 7.5-7.5-7.5" clip-rule="evenodd">
+                                    </path>
+                                </svg>
+                            </button>
+                            <ul id="dropdown2-example" class="hidden py-2 space-y-2">
+                                <li class="px-6">
+                                    <a href="grade.html"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
+                                        tài 4</a>
+                                </li>
+                                <li class="px-6">
+                                    <a href="grade.html"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
+                                        tài 5</a>
+                                </li>
+                                <li class="px-6">
+                                    <a href="grade.html"
+                                        class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-700 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Đề
+                                        tài 6</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="flex-col w-5/6 md:w-5/6 sm:w-5/6 px-3 py-3">
+                <div class="card">
+                    <div class="card-header font-bold">Hướng dẫn đề tài nghiên cứu</div>
+                    <div class="card-body">
+                        <div class="font-normal row">
+                            <div class="font-semibold col-lg-2">Tên đề tài:</div>
+                            <div class="col-lg-10"> Sóng trong các môi trường đàn hồi và thuần nhất hóa biên phân chia
+                                độ
+                                nhám cao
+                            </div>
+                            <div class="col-lg-10 font-semibold">Tóm tắt nội dung đề tài:</div>
+                            <textarea class="col-lg-12" id="abstract">Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc
                             trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn
                             cho ngành công nghiệp in ấn từ những năm 1500, khi một họa sĩ vô danh ghép nhiều đoạn văn
                             bản với nhau để tạo thành một bản mẫu văn bản. Đoạn văn bản này không những đã tồn tại năm
@@ -328,87 +332,96 @@
                             nhau đã xuất hiện, đôi khi do vô tình, nhiều khi do cố ý (xen thêm vào những câu hài hước
                             hay thông tục).
                         </textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 font-semibold">Tệp đính kèm và liên kết:</div>
-                        <div class="row link">
-                            <div class="col-md"><a href="#" class="item"><i class="fa-solid fa-image"></i> Ảnh nghiên
-                                cứu.png</a><a href="#" class="fa-solid fa-trash-can"></a>
-                            </div>
-                            <!--<div class="col-md"><a href="#"><i class="fa-solid fa-image"></i> Ảnh nghiên cứu.png</a></div>-->
-                            <div class="col-md"><a href="#" class="item"><i class="fa-solid fa-file"></i> Báo cáo nghiên
-                                cứu.pdf</a><a href="#" class="fa-solid fa-trash-can"></a>
-                            </div>
-                            <!--<div class="col-md"><a href="#"><i class="fa-solid fa-file"></i> Báo cáo nghiên cứu.pdf</a></div>-->
-                            <div class="col-md"><a href="#" class="item"><i class="fa-solid fa-link"></i> Liên kết tham
-                                khảo nghiên
-                                cứu</a><a href="#" class="fa-solid fa-trash-can"></a></div>
-                            <!--<div class="col-md"><a href="#"><i class="fa-solid fa-link"></i> Liên kết tham khảo nghiên cứu</a></div>-->
                         </div>
-                        <div class="flex justify-center items-center w-full">
-                            <label for="dropzone-file"
-                                   class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-                                <div class="flex flex-col justify-center items-center pt-5 pb-6">
-                                    <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none"
-                                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                              d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
-                                    </svg>
-                                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
-                                            class="font-semibold">Click to upload</span> or drag and drop</p>
+                        <div class="row">
+                            <div class="col-lg-12 font-semibold">Tệp đính kèm và liên kết:</div>
+                            <div class="row link">
+                                <div class="col-md"><a href="#" class="item"><i class="fa-solid fa-image"></i> Ảnh
+                                        nghiên
+                                        cứu.png</a><a href="#" class="fa-solid fa-trash-can"></a>
                                 </div>
-                                <input id="dropzone-file" type="file" class="hidden"/>
-                            </label>
+                                <!--<div class="col-md"><a href="#"><i class="fa-solid fa-image"></i> Ảnh nghiên cứu.png</a></div>-->
+                                <div class="col-md"><a href="#" class="item"><i class="fa-solid fa-file"></i> Báo cáo
+                                        nghiên
+                                        cứu.pdf</a><a href="#" class="fa-solid fa-trash-can"></a>
+                                </div>
+                                <!--<div class="col-md"><a href="#"><i class="fa-solid fa-file"></i> Báo cáo nghiên cứu.pdf</a></div>-->
+                                <div class="col-md"><a href="#" class="item"><i class="fa-solid fa-link"></i> Liên kết
+                                        tham
+                                        khảo nghiên
+                                        cứu</a><a href="#" class="fa-solid fa-trash-can"></a></div>
+                                <!--<div class="col-md"><a href="#"><i class="fa-solid fa-link"></i> Liên kết tham khảo nghiên cứu</a></div>-->
+                            </div>
+                            <div class="flex justify-center items-center w-full">
+                                <label for="dropzone-file"
+                                    class="flex flex-col justify-center items-center w-full h-64 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                                    <div class="flex flex-col justify-center items-center pt-5 pb-6">
+                                        <svg aria-hidden="true" class="mb-3 w-10 h-10 text-gray-400" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                                            </path>
+                                        </svg>
+                                        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span
+                                                class="font-semibold">Click to upload</span> or drag and drop</p>
+                                    </div>
+                                    <input id="dropzone-file" type="file" class="hidden" />
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <form>
-                <label for="chat" class="sr-only">Comment</label>
-                <div class="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
-                    <button type="button"
+                <form>
+                    <label for="chat" class="sr-only">Comment</label>
+                    <div class="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
+                        <button type="button"
                             class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button type="button"
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button type="button"
                             class="p-2 text-gray-500 rounded-lg cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <textarea id="Comment" rows="1"
-                              class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                              placeholder="Type your comment..."></textarea>
-                    <button type="submit"
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <textarea id="Comment" rows="1"
+                            class="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Type your comment..."></textarea>
+                        <button type="submit"
                             class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600">
-                        <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </form>
+                            <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-<script>
-    tinymce.init({
-        selector: 'textarea#abstract',  // change this value according to your HTML
-        height: '50rem',
-        width: '100%',
-        plugins: 'autoresize',
-        statusbar: false,
-    });
-</script>
-<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#abstract',  // change this value according to your HTML
+            height: '50rem',
+            width: '100%',
+            plugins: 'autoresize',
+            statusbar: false,
+        });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>
 
 </html>
