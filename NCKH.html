@@ -1,0 +1,669 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="./src/style.css" rel="stylesheet">
+  <title>Nghiên cứu khoa học</title>
+</head>
+
+<body class="bg-slate-200">
+  <!-- Begin header -->
+  <!-- component -->
+  <div>
+    <header>
+      <nav class="header bg-white border-gray-200 px-4 lg:px-6 py-2.5 pt-3 dark:bg-white">
+        <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="#" class="flex items-center">
+            <img src="./src/img/connectdevelop.svg" class="mr-2 h-6 sm:h-9" alt="Logo" />
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-blue-900 uppercase">Thư viện tài
+              liệu</span>
+          </a>
+          <div class="flex items-center lg:order-2">
+            <!-- search button -->
+            <div
+              class="relative rounded-2xl bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:px-10 contents">
+              <div class="mx-auto max-w-md mx-4">
+
+
+                <form action="" class="relative mx-auto w-max">
+                  <input type="search"
+                    class="peer cursor-pointer relative z-10 h-12 w-12 rounded-full border pl-10 outline-none text-gray-800 focus:w-full focus:cursor-text focus:border-gray-400 focus:pl-12 focus:pr-4 bg-transparent " />
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent text-black px-3.5 peer-focus:border-white peer-focus:text-gray-800"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </form>
+              </div>
+            </div>
+
+            <a href="#"
+              class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Log
+              in
+            </a>
+
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
+              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+
+            <button data-collapse-toggle="mobile-menu-2" type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+            <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              <li>
+                <a href="#"
+                  class="block py-2 pr-4 pl-3 text-blue-900 rounded bg-blue-700 lg:bg-transparent lg:p-0 dark:text-blue-900"
+                  aria-current="page">Home</a>
+              </li>
+              <li>
+                <a id="buttonNCKH" href="test.html"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b lg:text-blue-700  border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Nghiên
+                  cứu khoa học</a>
+              </li>
+              <li>
+                <a id="buttonDeThi"  href="index.html"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b  border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Đề
+                  Thi</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b  border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Trường</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b  border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Team</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b  border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+  </div>
+
+
+  <!-- Begin Container -->
+  <div id="Container" class="text-center bg-transparent h-full">
+
+    <div class="float-left w-1/4" style="height: 1800px"></div>
+    
+    <!-- status -->
+    <div class="viewer1 shadow-2xl float-left w-50 bg-slate-50 rounded-2xl mt-5 my-8">
+
+      <div class="user1-status my-4">
+        <div class="header-tus">
+          <div class="avatar float-left mx-4">
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+          </div>
+          <div class="name-and-time float-left rounded-3xl pr-1 text-black">
+            <p class="name-user text-start font-semibold text-black">Phạm Văn A</p>
+            <p class="text-black">9 giờ trước</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="caption text-start pt-4 px-6 text-xl">Nghiên cứu về khoa học thiên thể vũ trụ</div>
+      </div>
+
+      <!-- <div class="time-and-school text-start text-gray-200 mb-8">
+            <p class="float-left my-1 text-gray-200 mx-2"><i class="fa-regular fa-clock"></i><a class ="text-gray-200 mx-2" href="">09/07/2022</a></p>
+            <p class="float-left my-1 text-gray-200 mx-2"><i class="fa-regular fa-comment"></i><a class ="text-gray-200 mx-2" href="#">0</a><p>
+            <div class="clear"></div>
+        </div> -->
+      <div class="clear"></div>
+
+
+
+      <!--Begin View file -->
+      <div class="view page">
+        <iframe class="inline-flex max-w-full max-h-screen rounded-lg"
+          src="https://drive.google.com/file/d/1d6ma3NXn8Rt-5CTD-AnPl8T6jsvd1KbR/preview" width="100%" height="300px"
+          allow="autoplay"></iframe>
+      </div>
+
+      <div class="reaction max-w-full mx-2 mb-2 border-t-1 border-b-1 ">
+        <div
+          class="like-block float-left w-1/2 py-2 text-center hover:border-opacity-60 hover:cursor-pointer hover:bg-slate-500 rounded-lg">
+
+          <p class="text-black"><i class="fa-regular fa-thumbs-up my-2 mx-2"></i>like</p>
+        </div>
+
+        <div
+          class="comment-block float-left w-1/2 py-2 text-center hover:border-opacity-60 hover:cursor-pointer hover:bg-slate-500 rounded-lg">
+
+          <p class="text-black"><i class="fa-regular fa-comment my-2 mx-2"></i>Comment</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+      <div class="user-comments">
+        <div class="user1-comment my-4">
+          <div class="comment">
+            <div class="avatar float-left mx-4">
+              <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+                src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+            </div>
+            <div class="content-comment float-left bg-slate-300 rounded-3xl px-6 py-1">
+              <p class="name-user text-start font-semibold">Nguyễn Văn B</p>
+              <p class="">Ôi!!! Mình tìm bài này mãi</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div class="user2-comment my-4">
+          <div class="comment">
+            <div class="avatar float-left mx-4">
+              <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+                src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+            </div>
+            <div class="content-comment float-left bg-slate-300 rounded-3xl px-6 py-1">
+              <p class="name-user text-start font-semibold">Phạm Văn A</p>
+              <p class="">Đề này khó quá, ai có cách giải không ạ?</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!--Comment component -->
+      <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" /> -->
+
+      <div class="max-w-full mx- bg-transparent">
+
+        <form>
+          <label for="chat" class="sr-only">Comment</label>
+          <div class="flex items-center py-2 px-3 bg-transparent rounded-lg border-solid border-l-zinc-500">
+            <button type="button"
+              class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <button type="button" class="p-2 text-gray-500 rounded-lg cursor-pointer hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <textarea id="Comment" rows="1"
+              class="block mx-4 p-2.5 w-full text-sm text-gray-800 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Type your comment..."></textarea>
+            <button type="submit"
+              class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 ">
+              <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <!-- <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script> -->
+      </div>
+
+    </div>
+
+    <div class="viewer2 shadow-2xl float-left w-50 bg-slate-50 rounded-2xl mt-5 my-5">
+
+      <div class="user1-status my-4">
+        <div class="header-tus">
+          <div class="avatar float-left mx-4">
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+              src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+          </div>
+          <div class="name-and-time float-left rounded-3xl pr-1 text-black">
+            <p class="name-user text-start font-semibold text-black">Phạm Văn A</p>
+            <p class="text-black">9 giờ trước</p>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div class="caption text-start pt-4 px-6 text-xl">Nghiên cứu về toán học - Những ứng dụng của toán trong đời sống hiện nay</div>
+      </div>
+
+      <!-- <div class="time-and-school text-start text-gray-200 mb-8">
+            <p class="float-left my-1 text-gray-200 mx-2"><i class="fa-regular fa-clock"></i><a class ="text-gray-200 mx-2" href="">09/07/2022</a></p>
+            <p class="float-left my-1 text-gray-200 mx-2"><i class="fa-regular fa-comment"></i><a class ="text-gray-200 mx-2" href="#">0</a><p>
+            <div class="clear"></div>
+        </div> -->
+      <div class="clear"></div>
+
+
+
+      <!--Begin View file -->
+      <div class="view page">
+        <iframe src="https://drive.google.com/file/d/1MZy352lSPmipxk7zpZhE5S8KqKSPuKbf/preview" width="100%" height="300px" allow="autoplay"></iframe>
+      </div>
+
+      <div class="reaction max-w-full mx-2 mb-2 border-t-1 border-b-1 ">
+        <div
+          class="like-block float-left w-1/2 py-2 text-center hover:border-opacity-60 hover:cursor-pointer hover:bg-slate-500 rounded-lg">
+
+          <p class="text-black"><i class="fa-regular fa-thumbs-up my-2 mx-2"></i>like</p>
+        </div>
+
+        <div
+          class="comment-block float-left w-1/2 py-2 text-center hover:border-opacity-60 hover:cursor-pointer hover:bg-slate-500 rounded-lg">
+
+          <p class="text-black"><i class="fa-regular fa-comment my-2 mx-2"></i>Comment</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+
+      <div class="user-comments">
+        <div class="user1-comment my-4">
+          <div class="comment">
+            <div class="avatar float-left mx-4">
+              <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+                src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+            </div>
+            <div class="content-comment float-left bg-slate-300 rounded-3xl px-6 py-1">
+              <p class="name-user text-start font-semibold">Vũ Thị C</p>
+              <p class="">Cái này phù hợp với thực tế ghê</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <div class="user2-comment my-4">
+          <div class="comment">
+            <div class="avatar float-left mx-4">
+              <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full"
+                src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
+            </div>
+            <div class="content-comment float-left bg-slate-300 rounded-3xl px-6 py-1">
+              <p class="name-user text-start font-semibold">Trần Văn D</p>
+              <p class="">Còn ai có tài liệu tương tự không ạ?</p>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <!--Comment component -->
+      <!-- <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" /> -->
+
+      <div class="max-w-full mx- bg-transparent">
+
+        <form>
+          <label for="chat" class="sr-only">Comment</label>
+          <div class="flex items-center py-2 px-3 bg-transparent rounded-lg border-solid border-l-zinc-500">
+            <button type="button"
+              class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <button type="button" class="p-2 text-gray-500 rounded-lg cursor-pointer hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+            <textarea id="Comment" rows="1"
+              class="block mx-4 p-2.5 w-full text-sm text-gray-800 bg-gray-200 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Type your comment..."></textarea>
+            <button type="submit"
+              class="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 ">
+              <svg class="w-6 h-6 rotate-90" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <!-- <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script> -->
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="viewer float-left max-w-50">
+      <div class="tham-khao">
+        <h2 class="px-8 py-2 my-6 text-2xl text-start bg-slate-500 rounded-2xl text-slate-300">Tài liệu liên quan</h2>
+        <div class="tai-lieu-1 w-30  border-solid border-2 mb-6 float-left">
+          <img class="bg-slate-400 h-40" src="" alt="">
+          <p class="text-gray-800 m-2 "><a class="hover:text-blue-600" href="#">Đề thi Giải Tích 2 giữa
+              kì năm 2022-2023</a></p>
+        </div>
+        <div class="tai-lieu-1 w-30 mx-7 border-solid border-2 mb-6 float-left">
+          <img class="bg-slate-400 h-40" src="" alt="">
+          <p class="text-gray-800 m-2 "><a class="hover:text-blue-600" href="#">Đề thi Giải Tích 2 giữa
+              kì năm 2022-2023</a></p>
+        </div>
+        <div class="tai-lieu-1 w-30  border-solid border-2 mb-6 float-left">
+          <img class="bg-slate-400 h-40" src="" alt="">
+          <p class="text-gray-800 m-2 "><a class="hover:text-blue-600" href="#">Đề thi Giải Tích 2 giữa
+              kì năm 2022-2023</a></p>
+        </div>
+        <div class="clear"></div>
+
+      </div>
+    </div>
+
+    <div class="float-left w-1/4"></div>
+    <div class="clear"></div>
+
+  </div>
+
+  <!-- chân trang chuyển tab -->
+  <div id="Pagination">
+    <div class="
+    flex
+    border border-[#e4e4e4]
+    bg-white
+    p-2
+    rounded-xl
+    justify-center
+    ">
+    <ul class="flex items-center -mx-[6px] justify-center">
+      <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
+            w-9
+            h-9
+            flex
+            items-center
+            justify-center
+            rounded-md
+            border border-[#EDEFF1]
+            text-[#838995] text-base
+            hover:bg-primary hover:border-primary hover:text-white
+            ">
+            <span>
+                <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                  <path d="M7.12979 1.91389L7.1299 1.914L7.1344 1.90875C7.31476 1.69833 7.31528 1.36878 7.1047 1.15819C7.01062 1.06412 6.86296 1.00488 6.73613 1.00488C6.57736 1.00488 6.4537 1.07206 6.34569 1.18007L6.34564 1.18001L6.34229 1.18358L0.830207 7.06752C0.830152 7.06757 0.830098 7.06763 0.830043 7.06769C0.402311 7.52078 0.406126 8.26524 0.827473 8.73615L0.827439 8.73618L0.829982 8.73889L6.34248 14.6014L6.34243 14.6014L6.34569 14.6047C6.546 14.805 6.88221 14.8491 7.1047 14.6266C7.30447 14.4268 7.34883 14.0918 7.12833 13.8693L1.62078 8.01209C1.55579 7.93114 1.56859 7.82519 1.61408 7.7797L1.61413 7.77975L1.61729 7.77639L7.12979 1.91389Z" stroke-width="0.3"></path>
+                </svg>
+            </span>
+          </a>
+      </li>
+      <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
+            w-9
+            h-9
+            flex
+            items-center
+            justify-center
+            rounded-md
+            border border-[#EDEFF1]
+            text-[#838995] text-base
+            hover:bg-primary hover:border-primary hover:text-white
+            ">
+          1
+          </a>
+      </li>
+      <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
+            w-9
+            h-9
+            flex
+            items-center
+            justify-center
+            rounded-md
+            border border-[#EDEFF1]
+            text-[#838995] text-base
+            hover:bg-primary hover:border-primary hover:text-white
+            ">
+          2
+          </a>
+      </li>
+      <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
+            w-9
+            h-9
+            flex
+            items-center
+            justify-center
+            rounded-md
+            border border-[#EDEFF1]
+            text-[#838995] text-base
+            hover:bg-primary hover:border-primary hover:text-white
+            ">
+          3
+          </a>
+      </li>
+      <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
+            w-9
+            h-9
+            flex
+            items-center
+            justify-center
+            rounded-md
+            border border-[#EDEFF1]
+            text-[#838995] text-base
+            hover:bg-primary hover:border-primary hover:text-white
+            ">
+          4
+          </a>
+      </li>
+
+      <li class="px-[6px]">
+        <a href="javascript:void(0)" class="
+          w-9
+          h-9
+          flex
+          items-center
+          justify-center
+          rounded-md
+          border border-[#EDEFF1]
+          text-[#838995] text-base
+          hover:bg-primary hover:border-primary hover:text-white
+          ">
+        ...
+        </a>
+    </li>
+      <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
+            w-9
+            h-9
+            flex
+            items-center
+            justify-center
+            rounded-md
+            border border-[#EDEFF1]
+            text-[#838995] text-base
+            hover:bg-primary hover:border-primary hover:text-white
+            ">
+            <span>
+                <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                  <path d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z" stroke-width="0.3"></path>
+                </svg>
+            </span>
+          </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <!-- Begin Footer -->
+  <div class="Footer bg-blueGray-200 shadow-2xl">
+
+    <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
+    <link rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <footer class="relative bg-blueGray-200 pt-8 pb-6 shadow-lg">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap text-left lg:text-left">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl fonat-semibold text-blueGray-700">Hanoi University of Science</h4>
+            <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+              HUS Applied Mathematics Informatics Club
+            </h5>
+            <div class="mt-6 lg:mb-0 mb-6">
+              <button
+                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button
+                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button">
+                <i class="fab fa-facebook-square"><a href="https://www.facebook.com/hamictoantin"></a></i>
+              </button>
+              <button
+                class="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button">
+                <i class="fa-brands fa-github"></i>
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Team Recursive</span>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/presentation?ref=njs-profile">Công Ving</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://blog.creative-tim.com?ref=njs-profile">La Thư</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://www.github.com/creativetimofficial?ref=njs-profile">Minh Nhật</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Minh Ngọc</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Quang Thăng</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">HELP AND SUPPORT</span>
+                <ul class="list-unstyled">
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">VAIS</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://creative-tim.com/terms?ref=njs-profile">Anh Quang Anh</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://creative-tim.com/privacy?ref=njs-profile">Tiến Việt</a>
+                  </li>
+                  <li>
+                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      href="https://creative-tim.com/contact-us?ref=njs-profile">HAMIC</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-blueGray-300">
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              Copyright © <span id="get-current-year">2022</span><a href="https://www.creative-tim.com/product/notus-js"
+                class="text-blueGray-500 hover:text-gray-800" target="_blank"> Creatvie Web by
+                <a href="https://www.creative-tim.com?ref=njs-profile"
+                  class="text-blueGray-500 hover:text-blueGray-800">Recursive Team</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </div>
+  <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
+
+  <script>
+    // bật tắt login, avatar và menu user
+    const buttonLogin = document.querySelector('.buttonLogin');
+    const buttonAvatar = document.querySelector('.buttonAvatar');
+    const buttonLogout = document.querySelector('.buttonLogout');
+    const userMenu = document.querySelector('#view')
+
+    function ShowAvatar() {
+      buttonAvatar.classList.add('open');
+      buttonLogin.classList.add('hidden');
+    }
+
+    function HideAvatar() {
+      buttonAvatar.classList.remove('open');
+      buttonLogin.classList.remove('hidden');
+    }
+
+    buttonLogin.addEventListener('click', ShowAvatar);
+
+    buttonLogout.addEventListener('click', HideAvatar);
+
+    function ShowUserMenu() {
+      userMenu.classList.add('open');
+    }
+
+    function HideUserMenu() {
+      userMenu.classList.remove('open');
+    }
+
+    buttonAvatar.addEventListener('click', ShowUserMenu)
+
+    // chuyển trang giữa đề thi và nckh
+
+    const buttonDeThi = document.querySelector('#buttonDeThi');
+    const buttonNCKH = document.querySelector('#buttonNCKH');
+
+    const DeThi = document.querySelector('.DeThi');
+    const NCKH = document.querySelector('.NCKH');
+
+    function ShowNCKH() {
+      NCKH.classList.add('open');
+      DeThi.classList.add('hidden');
+    }
+
+    function ShowDeThi() {
+      NCKH.classList.remove('open');
+      DeThi.classList.remove('hidden');
+    }
+
+    buttonDeThi.addEventListener('click', ShowDeThi);
+    buttonNCKH.addEventListener('click', ShowNCKH);
+  </script>
+</body>
+
+</html>
