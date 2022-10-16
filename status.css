@@ -46,7 +46,7 @@ body{
 .post header{
   font-size: 22px;
   font-weight: 600;
-  padding: 17px 0;
+  padding-bottom: 17px;
   text-align: center;
   border-bottom: 1px solid #bfbfbf;
 }
