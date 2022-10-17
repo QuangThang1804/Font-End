@@ -1,5 +1,4 @@
-import { get } from "../utils/request";
-
+import { get } from "../../utils/request.js";
 /**
  * @param {*} idSubject (Mã chủ đề)
  * @param {*} page (Trang)
@@ -8,7 +7,9 @@ import { get } from "../utils/request";
 
 const getExamByIdSubject = async (idSubject, page = 1) => {
   try {
-    const res = await get(`exam/?idSubject=${idSubject}&page=${page}`);
+    const res = await get(
+      `exam/search/?idExamSubject=${idSubject}&page=${page}`
+    );
     return res;
   } catch (error) {
     console.log(error.message);

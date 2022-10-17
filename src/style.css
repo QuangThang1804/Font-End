@@ -428,3 +428,7 @@ input[name="name-theme"]:focus, input[name="name-theme"]:active {
     background-color: blue;
     color: azure;
 }
+
+.tox .tox-notification--warn, .tox .tox-notification--warning{
+    display: none !important;
+}

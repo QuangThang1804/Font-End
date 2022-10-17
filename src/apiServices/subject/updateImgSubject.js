@@ -1,18 +1,16 @@
-import { getCookie } from "../../utils/libCookie";
-import { post } from "../../utils/request";
+import { getCookie } from "../../utils/libCookie.js";
+import { put } from "../../utils/request.js";
 
 /**
- *
- * @param {*} idSubject
+ *  @param {*} idSubject (id môn học)
  * @param {*} data
  * @returns
- * Data ở đây cũng cần sử dụng FormData để tạo và tên của trường đó là imgSchool
  */
 
 const updateImgSubject = async (idSubject, data) => {
   try {
     const idToken = getCookie("idToken");
-    const res = await post(`subject/update/image/${idSubject}`, data, {
+    const res = await put(`subject/update/img/${idSubject}`, data, {
       headers: {
         idtoken: idToken,
       },

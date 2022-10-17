@@ -1,5 +1,5 @@
-import { getCookie } from "../../utils/libCookie";
-import { put } from "../../utils/request";
+import { getCookie } from "../../utils/libCookie.js";
+import { put } from "../../utils/request.js";
 
 /**
  *  @param {*} idSubject (id môn học)

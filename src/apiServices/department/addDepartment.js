@@ -1,5 +1,5 @@
-import { getCookie } from "../../utils/libCookie";
-import { post } from "../../utils/request";
+import { getCookie } from "../../utils/libCookie.js";
+import { post } from "../../utils/request.js";
 
 /**
  *  @param {*} data (Trong data gồm có name)

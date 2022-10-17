@@ -7,10 +7,7 @@ import { post } from "../../utils/request.js";
         lastName,
         email,
         password,
-        codeSudentOrLecturers,
-        isLecturers,
-        isStudent,
-
+        codeSudentOrLecturers
     }
 * Data gửi lên cần có cấu trúc như này
  */

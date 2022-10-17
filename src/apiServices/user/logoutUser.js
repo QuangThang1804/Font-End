@@ -1,5 +1,5 @@
-import { getCookie } from "../../utils/libCookie";
-import { get } from "../../utils/request";
+import { getCookie } from "../../utils/libCookie.js";
+import { get } from "../../utils/request.js";
 
 const logoutUser = async () => {
   try {

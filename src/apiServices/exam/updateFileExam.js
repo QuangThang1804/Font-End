@@ -1,5 +1,5 @@
-import { getCookie } from "../utils/libCookie";
-import { put } from "../utils/request";
+import { getCookie } from "../../utils/libCookie.js";
+import { put } from "../../utils/request.js";
 
 /**
  * @param {*} idExam
@@ -8,10 +8,10 @@ import { put } from "../utils/request";
  * Data ở đây dùng FormData
  */
 
-const updateExamFile = async (idExam, data) => {
+const updateFileExam = async (idExam, data) => {
   try {
     const idToken = getCookie("idToken");
-    const res = await put(`/exam/updateFile/${idExam}`, data, {
+    const res = await put(`exam/update/file/${idExam}`, data, {
       headers: {
         idtoken: idToken,
       },
@@ -22,4 +22,4 @@ const updateExamFile = async (idExam, data) => {
   }
 };
 
-export default updateExamFile;
+export default updateFileExam;

@@ -1,5 +1,4 @@
-import { get } from "../utils/request";
-
+import { get } from "../../utils/request.js";
 /**
  * @param {*} page (Trang)
  * @returns

@@ -1,5 +1,6 @@
 import getUserByID from "../apiServices/user/getUserById.js"
 import { getCookie } from "../utils/libCookie.js"
+import getAllResearch from "../apiServices/research/getAllResearch.js";
 
 console.log(buttonAvatar);
 
@@ -16,10 +17,20 @@ async function getUser() {
         buttonAvatar[0].style.display = "block";
         const fullName = user.firstName + " " + user.lastName;
         nameUser.innerText = fullName;
+
     }
 }
 
 getUser()
+
+async function getDataResearch () {
+    console.log("hi");
+    const data = await getAllResearch()
+    console.log(data);
+}
+
+getDataResearch()
+
 
 
 

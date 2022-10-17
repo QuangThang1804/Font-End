@@ -1,4 +1,3 @@
-// import axios from "../../node_modules/axios/index.d.ts";
 
 
 const request = axios.create({

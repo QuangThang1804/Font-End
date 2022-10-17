@@ -1,4 +1,4 @@
-import { put } from "../../utils/request";
+import { put } from "../../utils/request.js";
 
 const countExamDownload = async (idExam) => {
   try {

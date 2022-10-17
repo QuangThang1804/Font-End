@@ -1,4 +1,4 @@
-import { get } from "../../utils/request";
+import { get } from "../../utils/request.js";
 /**
  *
  * @param {*} id (id bài báo cần lấy comment)

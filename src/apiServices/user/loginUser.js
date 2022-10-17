@@ -14,10 +14,7 @@ const loginUser = async (data) => {
   try {
     const res = await post("/user/login", data);
     const idToken = res.idToken;
-    const idUser = res.idUser;
     setCookie("idToken", idToken, 1);
-    setCookie("idUser", idUser, 1);
-    console.log(res);
     return res;
   } catch (error) {
     console.log(error.message);

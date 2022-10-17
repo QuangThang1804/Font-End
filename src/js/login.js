@@ -12,7 +12,7 @@ async function handerLogin(e) {
     const res = await loginUser(user)
     console.log(res);
     if (res) {
-        // window.location = "/index.html"
+        window.location = "/index.html"
     }
 }
 

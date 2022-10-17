@@ -1,4 +1,4 @@
-import { get } from "../../utils/request";
+import { get } from "../../utils/request.js";
 
 /**
  *
@@ -6,13 +6,14 @@ import { get } from "../../utils/request";
  * @returns
  */
 
-const getImageResearchbyId = async (id) => {
+const getFileResearchbyId = async (id) => {
   try {
-    const res = get(`research/file/${id}`);
-    return res;
+    const res = await get(`research/file/${id}`);
+    const uri = `data:${res.type};base64,` + res.data;
+    return uri;
   } catch (error) {
     console.log(error.message);
   }
 };
 
-export default getImageResearchbyId;
+export default getFileResearchbyId;

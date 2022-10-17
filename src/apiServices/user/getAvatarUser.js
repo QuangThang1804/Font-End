@@ -1,5 +1,10 @@
-import { getCookie } from "../../utils/libCookie";
-import { get } from "../../utils/request";
+
+import { getCookie } from "../../utils/libCookie.js";
+import { get } from "../../utils/request.js";
+
+function base64encode(data) {
+  return btoa(data.map((v) => String.fromCharCode(v)).join(""));
+}
 
 const getAvatarUser = async (idUser) => {
   try {
@@ -9,7 +14,8 @@ const getAvatarUser = async (idUser) => {
         idtoken: idToken,
       },
     });
-    return res;
+    const uri = `data:${res.type};base64,` + res.data;
+    return uri;
   } catch (error) {
     console.log(error);
   }

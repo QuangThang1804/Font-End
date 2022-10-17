@@ -1,9 +1,9 @@
-import { getCookie } from "../../utils/libCookie";
-import { get } from "../../utils/request";
+import { getCookie } from "../../utils/libCookie.js";
+import { get } from "../../utils/request.js";
 
 /**
  * @param {*} type
- * type là kiểu danh sách muốn lấy như student, , examteacher
+ * type là kiểu danh sách muốn lấy như student, lecturers
  * Lấy idToken đã lưu khi lofin để truyền vào làm đối số
  */
 const getAlluserByType = async (type) => {
