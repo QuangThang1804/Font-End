@@ -42,12 +42,12 @@
               </div>
             </div>
 
-            <a href="register.html"
+            <a href="register.html" id ="buttonRegister"
               class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Đăng
               ký
             </a>
 
-            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden
+            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
               src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
 
             <button data-collapse-toggle="mobile-menu-2" type="button"
@@ -132,10 +132,10 @@
               <img src="./src/img/Avatar-Facebook-trắng.jpg" alt="Avatar user"
                 class="w-10 md:w-16 rounded-full mx-auto" />
               <div>
-                <h2 class="font-medium text-xs md:text-sm text-center text-teal-500">
+                <h2 id="nameUser" class="font-medium text-xs md:text-sm text-center text-teal-500">
                   Họ và Tên
                 </h2>
-                <p class="text-xs text-gray-500 text-center">Chức vụ</p>
+                <p id="" class="text-xs text-gray-500 text-center">Chức vụ</p>
               </div>
             </div>
 
@@ -159,7 +159,7 @@
                     d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
                   </path>
                 </svg>
-                <span class="">Trang cá nhân</span>
+                <span id="buttonProfile" class="">Trang cá nhân</span>
               </a>
 
               <a href=""
@@ -187,16 +187,7 @@
                 <span class="">Tin nhắn</span>
               </a>
 
-              <a href=""
-                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
-                <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span class="">Table</span>
-              </a>
+              
               <a href=""
                 class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
                 <i
@@ -805,6 +796,8 @@
 
 
   </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script  type="module"  src="./src/js/home.js"></script>
 </body>
 
 </html>

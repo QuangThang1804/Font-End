@@ -149,7 +149,7 @@
                                 <div class="flex">
                                     <div
                                         class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                                        <i class="fa-solid fa-user-plus text-gray-400 text-lg"></i>
+                                        <i class="fa-solid fa-user text-gray-400 text-lg"></i>
                                     </div>
                                     <input type="text" id="personCode"
                                         class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
@@ -188,9 +188,9 @@
                         <div class="flex -mx-3">
                             <div class="w-full px-3 mb-10">
                                 <p class="text-xs font-semibold px-1 mb-2">Bạn là ?</p>
-                                  <input type="radio" id="pickGV" name="Chức vụ" value="Giảng viên">
+                                  <input type="radio" id="pickGV" name="Chức vụ" value="0">
                                   <label for="gv">Giảng viên</label><br>
-                                  <input type="radio" id="pickSV" name="Chức vụ" value="Sinh viên">
+                                  <input type="radio" id="pickSV" name="Chức vụ" value="1">
                                   <label for="sv">Sinh viên</label><br>
                             </div>
                         </div>
@@ -206,12 +206,15 @@
                         <div class="">
                             <a href="login.html"
                                     class="text-center block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">Bạn đã có tài khoản?</a>
+                                
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script  type="module"  src="./src/js/main.js"></script>
 
