@@ -1,6 +1,7 @@
 import getUserByID from "../apiServices/user/getUserById.js"
 import { getCookie } from "../utils/libCookie.js"
 import getAllResearch from "../apiServices/research/getAllResearch.js";
+import getAllExam from "../apiServices/exam/getAllExam.js";
 
 // console.log(buttonAvatar);
 
@@ -30,6 +31,11 @@ async function getDataResearch () {
 
 getDataResearch()
 
+async function getDataExam () {
+    const data = await getAllExam()
+    console.log(data);  
+}
 
+getDataExam()
 
 
