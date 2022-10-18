@@ -84,8 +84,6 @@ const getAllResearch = async () => {
               </div> -->
             <div class="clear"></div>
       
-      
-      
             <!--Begin View file -->
             <div class="view page">
               <iframe class="inline-flex max-w-full max-h-screen rounded-lg"
@@ -174,8 +172,7 @@ const getAllResearch = async () => {
               </form>
             </div>
       
-          </div>
-          <div class="clear"></div>`
+          </div>`
           const div = document.createElement("div")
           div.innerHTML = codeHtml
           container.appendChild(div)
