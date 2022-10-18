@@ -70,7 +70,7 @@
             <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
                 <a href="#"
-                  class="block py-2 pr-4 pl-3 rounded bg-blue-700 text-blue-900 lg:bg-transparent lg:p-0 dark:text-blue-900"
+                  class="block py-2 pr-4 pl-3 rounded bg-blue-700 text-blue-900 lg:bg-transparent lg:p-0 dark:text-blue-900 lg:hover:text-blue-700"
                   aria-current="page">Home</a>
               </li>
               <li>
@@ -103,9 +103,9 @@
     <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
   </div>
 
-
+ 
   <!-- Begin Container -->
-  <div id="Container">
+  <div id="Container" class="mb-5 h-max ">
     <!-- User menu 1 -->
 
     <body class="font-poppins antialiased">
@@ -122,12 +122,6 @@
           class="border-solid border-gray-600 border-spacing-px bg-white h-screen md:block shadow-xl px-3 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out border-l-neutral-500"
           x-show="sidenav" @click.away="sidenav = false">
           <div class="space-y-6 md:space-y-10 mt-10">
-            <!-- <h1 class="font-bold text-4xl text-center md:hidden">
-                D<span class="text-teal-600">.</span>
-              </h1>
-              <h1 class="hidden md:block font-bold text-sm md:text-xl text-center text-white">
-                Dashwind<span class="text-teal-600">.</span>
-              </h1> -->
             <div id="profile" class="space-y-3">
               <img src="./src/img/Avatar-Facebook-trắng.jpg" alt="Avatar user"
                 class="w-10 md:w-16 rounded-full mx-auto" />
@@ -468,7 +462,7 @@
       <div class="clear"></div>
     </div>
 
-    <div class="dieu-huong float-left w-1/4 min-w-max" style="height: 1000px"></div>
+    <div class="dieu-huong float-left w-1/4 min-w-max"></div>
 
     <div class="clear"></div>
 
@@ -733,7 +727,7 @@
       buttonLogin.classList.remove('hidden');
     }
 
-    buttonLogin.addEventListener('click', ShowAvatar);
+    // buttonLogin.addEventListener('click', ShowAvatar);
 
     buttonLogout.addEventListener('click', HideAvatar);
 

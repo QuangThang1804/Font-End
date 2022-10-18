@@ -44,8 +44,8 @@ const getAllCommentById = async (id) => {
 
 
 
-const getAllResearch = async (page) => {
-    const data = await getResearch(page)
+const getAllResearch = async () => {
+    const data = await getResearch()
     if(data) {
         const container = document.querySelector(".box__research")
         // var codeHtml = "";
@@ -187,4 +187,4 @@ const getAllResearch = async (page) => {
     }
 }
 
-getAllResearch(page? page : 1)
+getAllResearch()

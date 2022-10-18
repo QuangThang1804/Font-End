@@ -2,7 +2,7 @@ import getUserByID from "../apiServices/user/getUserById.js"
 import { getCookie } from "../utils/libCookie.js"
 import getAllResearch from "../apiServices/research/getAllResearch.js";
 
-console.log(buttonAvatar);
+// console.log(buttonAvatar);
 
 async function getUser() {
     const idUser = getCookie("idUser")
@@ -24,7 +24,6 @@ async function getUser() {
 getUser()
 
 async function getDataResearch () {
-    console.log("hi");
     const data = await getAllResearch()
     console.log(data);
 }

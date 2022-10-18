@@ -9,11 +9,13 @@ async function handerLogin(e) {
         email: textemail,
         password: userpasswordLogin
     }
+    console.log(loginUser)
     const res = await loginUser(user)
     console.log(res);
     if (res) {
         window.location = "/index.html"
     }
 }
+
 
 buttonLogin.addEventListener('click', (e) => handerLogin(e));
