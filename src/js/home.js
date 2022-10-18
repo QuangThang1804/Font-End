@@ -3,7 +3,7 @@ import { getCookie } from "../utils/libCookie.js"
 import getAllResearch from "../apiServices/research/getAllResearch.js";
 import getAllExam from "../apiServices/exam/getAllExam.js";
 
-console.log(buttonAvatar);
+// console.log(buttonAvatar);
 
 async function getUser() {
     const idUser = getCookie("idUser")

@@ -9,7 +9,6 @@ console.log(buttonRegister);
 const isLecturers = document.querySelector("#pickGV");
 const isStudent = document.querySelector("#pickSV");
 
-
 async function handerRegister(e) {
     e.preventDefault()
     const firstName = document.getElementById("firstName").value;

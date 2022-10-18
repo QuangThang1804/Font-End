@@ -41,9 +41,9 @@
               </div>
             </div>
 
-            <a href="#"
-              class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Log
-              in
+            <a href="register.html" id="buttonRegister"
+              class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Đăng
+              ký
             </a>
 
             <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
@@ -69,7 +69,7 @@
             <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               <li>
                 <a href="#"
-                  class="block py-2 pr-4 pl-3 text-blue-900 rounded bg-blue-700 lg:bg-transparent lg:p-0 dark:text-blue-900"
+                  class="block py-2 pr-4 pl-3 rounded bg-blue-700 text-blue-900 lg:bg-transparent lg:p-0 dark:text-blue-900 lg:hover:text-blue-700"
                   aria-current="page">Home</a>
               </li>
               <li>
@@ -78,7 +78,7 @@
                   cứu khoa học</a>
               </li>
               <li>
-                <a id="buttonDeThi"  href="index.html"
+                <a id="buttonDeThi" href="index.html"
                   class="hover:cursor-pointer block py-2 pr-4 pl-3 text-blue-900 border-b  border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark: text-blue-900 lg:dark:hover:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Đề
                   Thi</a>
               </li>
@@ -104,14 +104,124 @@
 
 
   <!-- Begin Container -->
-  <div id="Container" class="text-center bg-transparent h-full">
+  <div id="Container" class="bg-transparent h-full">
+     <!-- User menu 1 -->
+
+     <body class="font-poppins antialiased">
+      <div id="view" class="h-full max-w-xs flex flex-row float-right hidden" x-data="{ sidenav: true }">
+        <button @click="sidenav = true"
+          class="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden">
+          <svg class="w-5 h-5 fill-current" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div id="sidebar"
+          class="border-solid border-gray-600 border-spacing-px bg-white h-screen md:block shadow-xl px-3 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out border-l-neutral-500"
+          x-show="sidenav" @click.away="sidenav = false">
+          <div class="space-y-6 md:space-y-10 mt-10">
+            <!-- <h1 class="font-bold text-4xl text-center md:hidden">
+                D<span class="text-teal-600">.</span>
+              </h1>
+              <h1 class="hidden md:block font-bold text-sm md:text-xl text-center text-white">
+                Dashwind<span class="text-teal-600">.</span>
+              </h1> -->
+            <div id="profile" class="space-y-3">
+              <img src="./src/img/Avatar-Facebook-trắng.jpg" alt="Avatar user"
+                class="w-10 md:w-16 rounded-full mx-auto" />
+              <div>
+                <h2 id="nameUser" class="font-medium text-xs md:text-sm text-center text-teal-500">
+                  Họ và Tên
+                </h2>
+                <p id="" class="text-xs text-gray-500 text-center">Chức vụ</p>
+              </div>
+            </div>
+
+            <div id="menu" class="flex flex-col space-y-2">
+              <a href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out">
+                <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                  </path>
+                </svg>
+                <span class="">Dashboard</span>
+              </a>
+
+              <a href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
+                  </path>
+                </svg>
+                <span id="buttonProfile" class="">Trang cá nhân</span>
+              </a>
+
+              <a href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z">
+                  </path>
+                </svg>
+                <span class="">Dự án của bạn</span>
+              </a>
+
+
+
+              <a href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                <svg class="w-6 h-6 fill-current inline-block" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
+                  <path
+                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z">
+                  </path>
+                </svg>
+                <span class="">Tin nhắn</span>
+              </a>
+
+              
+              <a href=""
+                class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
+                <i
+                  class=" buttonLogout fa-solid fa-arrow-right-from-bracket w-7 h-7 fill-current inline-block px-1"></i>
+                <span class="">Đăng xuất</span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <script src="js/graph.js" type="text/javascript"></script>
+      <script>
+        var user = document.getElementById("user-chart").nodeName;
+        var chart = new Graph({
+          data: [1, 20, 5, 6, 8],
+          target: document.querySelector(user),
+        });
+      </script>
+    </body>
 
     <div class="float-left w-1/4" style="height: 1800px"></div>
 
     <div class="box__research"></div>
-    
+
     <!-- status -->
-    
+
+
+
+
+
+
+
     <div class="viewer float-left max-w-50">
       <div class="tham-khao">
         <h2 class="px-8 py-2 my-6 text-2xl text-start bg-slate-500 rounded-2xl text-slate-300">Tài liệu liên quan</h2>
@@ -150,8 +260,8 @@
     rounded-xl
     justify-center
     ">
-    <ul class="flex items-center -mx-[6px] justify-center">
-      <li class="px-[6px]">
+      <ul class="flex items-center -mx-[6px] justify-center">
+        <li class="px-[6px]">
           <a href="javascript:void(0)" class="
             w-9
             h-9
@@ -164,13 +274,15 @@
             hover:bg-primary hover:border-primary hover:text-white
             ">
             <span>
-                <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
-                  <path d="M7.12979 1.91389L7.1299 1.914L7.1344 1.90875C7.31476 1.69833 7.31528 1.36878 7.1047 1.15819C7.01062 1.06412 6.86296 1.00488 6.73613 1.00488C6.57736 1.00488 6.4537 1.07206 6.34569 1.18007L6.34564 1.18001L6.34229 1.18358L0.830207 7.06752C0.830152 7.06757 0.830098 7.06763 0.830043 7.06769C0.402311 7.52078 0.406126 8.26524 0.827473 8.73615L0.827439 8.73618L0.829982 8.73889L6.34248 14.6014L6.34243 14.6014L6.34569 14.6047C6.546 14.805 6.88221 14.8491 7.1047 14.6266C7.30447 14.4268 7.34883 14.0918 7.12833 13.8693L1.62078 8.01209C1.55579 7.93114 1.56859 7.82519 1.61408 7.7797L1.61413 7.77975L1.61729 7.77639L7.12979 1.91389Z" stroke-width="0.3"></path>
-                </svg>
+              <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                <path
+                  d="M7.12979 1.91389L7.1299 1.914L7.1344 1.90875C7.31476 1.69833 7.31528 1.36878 7.1047 1.15819C7.01062 1.06412 6.86296 1.00488 6.73613 1.00488C6.57736 1.00488 6.4537 1.07206 6.34569 1.18007L6.34564 1.18001L6.34229 1.18358L0.830207 7.06752C0.830152 7.06757 0.830098 7.06763 0.830043 7.06769C0.402311 7.52078 0.406126 8.26524 0.827473 8.73615L0.827439 8.73618L0.829982 8.73889L6.34248 14.6014L6.34243 14.6014L6.34569 14.6047C6.546 14.805 6.88221 14.8491 7.1047 14.6266C7.30447 14.4268 7.34883 14.0918 7.12833 13.8693L1.62078 8.01209C1.55579 7.93114 1.56859 7.82519 1.61408 7.7797L1.61413 7.77975L1.61729 7.77639L7.12979 1.91389Z"
+                  stroke-width="0.3"></path>
+              </svg>
             </span>
           </a>
-      </li>
-      <li class="px-[6px]">
+        </li>
+        <li class="px-[6px]">
           <a href="javascript:void(0)" class="
             w-9
             h-9
@@ -182,10 +294,10 @@
             text-[#838995] text-base
             hover:bg-primary hover:border-primary hover:text-white
             ">
-          1
+            1
           </a>
-      </li>
-      <li class="px-[6px]">
+        </li>
+        <li class="px-[6px]">
           <a href="javascript:void(0)" class="
             w-9
             h-9
@@ -197,10 +309,10 @@
             text-[#838995] text-base
             hover:bg-primary hover:border-primary hover:text-white
             ">
-          2
+            2
           </a>
-      </li>
-      <li class="px-[6px]">
+        </li>
+        <li class="px-[6px]">
           <a href="javascript:void(0)" class="
             w-9
             h-9
@@ -212,10 +324,10 @@
             text-[#838995] text-base
             hover:bg-primary hover:border-primary hover:text-white
             ">
-          3
+            3
           </a>
-      </li>
-      <li class="px-[6px]">
+        </li>
+        <li class="px-[6px]">
           <a href="javascript:void(0)" class="
             w-9
             h-9
@@ -227,12 +339,12 @@
             text-[#838995] text-base
             hover:bg-primary hover:border-primary hover:text-white
             ">
-          4
+            4
           </a>
-      </li>
+        </li>
 
-      <li class="px-[6px]">
-        <a href="javascript:void(0)" class="
+        <li class="px-[6px]">
+          <a href="javascript:void(0)" class="
           w-9
           h-9
           flex
@@ -243,10 +355,10 @@
           text-[#838995] text-base
           hover:bg-primary hover:border-primary hover:text-white
           ">
-        ...
-        </a>
-    </li>
-      <li class="px-[6px]">
+            ...
+          </a>
+        </li>
+        <li class="px-[6px]">
           <a href="javascript:void(0)" class="
             w-9
             h-9
@@ -259,173 +371,177 @@
             hover:bg-primary hover:border-primary hover:text-white
             ">
             <span>
-                <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
-                  <path d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z" stroke-width="0.3"></path>
-                </svg>
+              <svg width="8" height="15" viewBox="0 0 8 15" class="fill-current stroke-current">
+                <path
+                  d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z"
+                  stroke-width="0.3"></path>
+              </svg>
             </span>
           </a>
-      </li>
-    </ul>
-  </div>
+        </li>
+      </ul>
+    </div>
 
 
 
-  <!-- Begin Footer -->
-  <div class="Footer bg-blueGray-200 shadow-2xl">
+    <!-- Begin Footer -->
+    <div class="Footer bg-blueGray-200 shadow-2xl">
 
-    <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
-    <link rel="stylesheet"
-      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+      <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"> -->
+      <link rel="stylesheet"
+        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
 
-    <footer class="relative bg-blueGray-200 pt-8 pb-6 shadow-lg">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap text-left lg:text-left">
-          <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl fonat-semibold text-blueGray-700">Hanoi University of Science</h4>
-            <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
-              HUS Applied Mathematics Informatics Club
-            </h5>
-            <div class="mt-6 lg:mb-0 mb-6">
-              <button
-                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button">
-                <i class="fab fa-twitter"></i>
-              </button>
-              <button
-                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button">
-                <i class="fab fa-facebook-square"><a href="https://www.facebook.com/hamictoantin"></a></i>
-              </button>
-              <button
-                class="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                type="button">
-                <i class="fa-brands fa-github"></i>
-              </button>
+      <footer class="relative bg-blueGray-200 pt-8 pb-6 shadow-lg">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3xl fonat-semibold text-blueGray-700">Hanoi University of Science</h4>
+              <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                HUS Applied Mathematics Informatics Club
+              </h5>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button
+                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button
+                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button">
+                  <i class="fab fa-facebook-square"><a href="https://www.facebook.com/hamictoantin"></a></i>
+                </button>
+                <button
+                  class="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button">
+                  <i class="fa-brands fa-github"></i>
+                </button>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Team Recursive</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://www.creative-tim.com/presentation?ref=njs-profile">Công Ving</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://blog.creative-tim.com?ref=njs-profile">La Thư</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://www.github.com/creativetimofficial?ref=njs-profile">Minh Nhật</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Minh Ngọc</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Quang Thăng</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="w-full lg:w-4/12 px-4">
+                  <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">HELP AND SUPPORT</span>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">VAIS</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://creative-tim.com/terms?ref=njs-profile">Anh Quang Anh</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://creative-tim.com/privacy?ref=njs-profile">Tiến Việt</a>
+                    </li>
+                    <li>
+                      <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        href="https://creative-tim.com/contact-us?ref=njs-profile">HAMIC</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="w-full lg:w-6/12 px-4">
-            <div class="flex flex-wrap items-top mb-6">
-              <div class="w-full lg:w-4/12 px-4 ml-auto">
-                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Team Recursive</span>
-                <ul class="list-unstyled">
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation?ref=njs-profile">Công Ving</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com?ref=njs-profile">La Thư</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial?ref=njs-profile">Minh Nhật</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Minh Ngọc</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Quang Thăng</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="w-full lg:w-4/12 px-4">
-                <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">HELP AND SUPPORT</span>
-                <ul class="list-unstyled">
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">VAIS</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms?ref=njs-profile">Anh Quang Anh</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy?ref=njs-profile">Tiến Việt</a>
-                  </li>
-                  <li>
-                    <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us?ref=njs-profile">HAMIC</a>
-                  </li>
-                </ul>
+          <hr class="my-6 border-blueGray-300">
+          <div class="flex flex-wrap items-center md:justify-between justify-center">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-blueGray-500 font-semibold py-1">
+                Copyright © <span id="get-current-year">2022</span><a
+                  href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800"
+                  target="_blank"> Creatvie Web by
+                  <a href="https://www.creative-tim.com?ref=njs-profile"
+                    class="text-blueGray-500 hover:text-blueGray-800">Recursive Team</a>.
               </div>
             </div>
           </div>
         </div>
-        <hr class="my-6 border-blueGray-300">
-        <div class="flex flex-wrap items-center md:justify-between justify-center">
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <div class="text-sm text-blueGray-500 font-semibold py-1">
-              Copyright © <span id="get-current-year">2022</span><a href="https://www.creative-tim.com/product/notus-js"
-                class="text-blueGray-500 hover:text-gray-800" target="_blank"> Creatvie Web by
-                <a href="https://www.creative-tim.com?ref=njs-profile"
-                  class="text-blueGray-500 hover:text-blueGray-800">Recursive Team</a>.
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-  </div>
-  <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
+      </footer>
+      <!-- End Footer -->
+    </div>
+    <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f9ef6fd229.js" crossorigin="anonymous"></script>
 
-  <script>
-    // bật tắt login, avatar và menu user
-    const buttonLogin = document.querySelector('.buttonLogin');
-    const buttonAvatar = document.querySelector('.buttonAvatar');
-    const buttonLogout = document.querySelector('.buttonLogout');
-    const userMenu = document.querySelector('#view')
+    <script>
+      // bật tắt login, avatar và menu user
+      const buttonLogin = document.querySelector('.buttonLogin');
+      const buttonAvatar = document.querySelector('.buttonAvatar');
+      const buttonLogout = document.querySelector('.buttonLogout');
+      const userMenu = document.querySelector('#view')
 
-    function ShowAvatar() {
-      buttonAvatar.classList.add('open');
-      buttonLogin.classList.add('hidden');
-    }
+      function ShowAvatar() {
+        buttonAvatar.classList.add('open');
+        buttonLogin.classList.add('hidden');
+      }
 
-    function HideAvatar() {
-      buttonAvatar.classList.remove('open');
-      buttonLogin.classList.remove('hidden');
-    }
+      function HideAvatar() {
+        buttonAvatar.classList.remove('open');
+        buttonLogin.classList.remove('hidden');
+      }
 
-    buttonLogin.addEventListener('click', ShowAvatar);
+      buttonLogin.addEventListener('click', ShowAvatar);
 
-    buttonLogout.addEventListener('click', HideAvatar);
+      buttonLogout.addEventListener('click', HideAvatar);
 
-    function ShowUserMenu() {
-      userMenu.classList.add('open');
-    }
+      function ShowUserMenu() {
+        userMenu.classList.add('open');
+      }
 
-    function HideUserMenu() {
-      userMenu.classList.remove('open');
-    }
+      function HideUserMenu() {
+        userMenu.classList.remove('open');
+      }
 
-    buttonAvatar.addEventListener('click', ShowUserMenu)
+      buttonAvatar.addEventListener('click', ShowUserMenu)
 
-    // chuyển trang giữa đề thi và nckh
+      // chuyển trang giữa đề thi và nckh
 
-    const buttonDeThi = document.querySelector('#buttonDeThi');
-    const buttonNCKH = document.querySelector('#buttonNCKH');
+      const buttonDeThi = document.querySelector('#buttonDeThi');
+      const buttonNCKH = document.querySelector('#buttonNCKH');
 
-    const DeThi = document.querySelector('.DeThi');
-    const NCKH = document.querySelector('.NCKH');
+      const DeThi = document.querySelector('.DeThi');
+      const NCKH = document.querySelector('.NCKH');
 
-    function ShowNCKH() {
-      NCKH.classList.add('open');
-      DeThi.classList.add('hidden');
-    }
+      function ShowNCKH() {
+        NCKH.classList.add('open');
+        DeThi.classList.add('hidden');
+      }
 
-    function ShowDeThi() {
-      NCKH.classList.remove('open');
-      DeThi.classList.remove('hidden');
-    }
+      function ShowDeThi() {
+        NCKH.classList.remove('open');
+        DeThi.classList.remove('hidden');
+      }
 
-    buttonDeThi.addEventListener('click', ShowDeThi);
-    buttonNCKH.addEventListener('click', ShowNCKH);
-  </script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script  type="module"  src="./src/js/research.js"></script>
+      buttonDeThi.addEventListener('click', ShowDeThi);
+      buttonNCKH.addEventListener('click', ShowNCKH);
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/js/research.js"></script>
+    <script type="module" src="./src/js/home.js"></script>
 </body>
 
 </html>
