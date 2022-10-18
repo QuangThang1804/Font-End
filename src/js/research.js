@@ -43,10 +43,6 @@ const getAllCommentById = async (id) => {
 }
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 56594deb84d55c9460dedc65bccd7c45ed363623
 const getAllResearch = async () => {
     const data = await getResearch()
     if(data) {
