@@ -28,6 +28,9 @@ const getAllExam = async () => {
             const date = item.createAt
             const idSubject = item.idExamSubject
             const imgSchool = await getImgSchool(idSubject)
+            const status = item.isPublic
+            console.log("status", status);
+            if (status == true) {
             const codeHtml =  `
             <article class="bg-white p-4 rounded-2xl pb-5 mt-5 block mx-3">
         <figure class="mh-posts-list-thumb" style="width: 16%">
@@ -63,11 +66,10 @@ const getAllExam = async () => {
           const div = document.createElement("div")
           div.innerHTML = codeHtml
           container.appendChild(div)
-          
+            }
         });
         // console.log(codeHtml);
-
-    }
+      }
 }
 
 getAllExam()
