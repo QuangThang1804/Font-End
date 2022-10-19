@@ -1,5 +1,4 @@
-
-
+import axios from ".axios";
 const request = axios.create({
   baseURL: "https://recursive-hamic.herokuapp.com/",
   headers: {
