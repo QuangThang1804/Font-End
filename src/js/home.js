@@ -2,23 +2,21 @@ import getUserByID from "../apiServices/user/getUserById.js"
 import { getCookie } from "../utils/libCookie.js"
 import getAllResearch from "../apiServices/research/getAllResearch.js";
 import getAllExam from "../apiServices/exam/getAllExam.js";
-
+import getAllDepartment from "../apiServices/department/getAllDepartment.js"
 // console.log(buttonAvatar);
 
 async function getUser() {
     const idUser = getCookie("idUser")
     const user = await getUserByID(idUser)
-
     const buttonAvatar = document.getElementsByClassName("buttonAvatar");
     const buttonRegister = document.getElementById("buttonRegister");
     const nameUser = document.getElementById("nameUser");
     const buttonProfile = document.getElementById("buttonProfile");
     if (user) {
-        buttonRegister.style.display = "none !important";
-        buttonAvatar[0].style.display = "block !important";
+        buttonRegister.style.display = "none";
+        buttonAvatar[0].style.display = "block";
         const fullName = user.firstName + " " + user.lastName;
         nameUser.innerText = fullName;
-
     }
 }
 
@@ -38,4 +36,11 @@ async function getDataExam () {
 
 getDataExam()
 
+
+async function getDataDepartment () {
+    const data = await getAllDepartment()
+    console.log(data);  
+}
+
+getDataDepartment()
 
