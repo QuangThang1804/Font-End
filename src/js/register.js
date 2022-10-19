@@ -33,7 +33,7 @@ async function handerRegister(e) {
     const res = await registerUser(user)
     console.log(res);
     if (res) {
-        // window.location = "/index.html"
+        window.location = "/login.html"
     }
 
 }

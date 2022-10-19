@@ -14,8 +14,8 @@ async function getUser() {
     const nameUser = document.getElementById("nameUser");
     const buttonProfile = document.getElementById("buttonProfile");
     if (user) {
-        buttonRegister.style.display = "none";
-        buttonAvatar[0].style.display = "block";
+        buttonRegister.style.display = "none !important";
+        buttonAvatar[0].style.display = "block !important";
         const fullName = user.firstName + " " + user.lastName;
         nameUser.innerText = fullName;
 
