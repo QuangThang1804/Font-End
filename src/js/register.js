@@ -6,8 +6,12 @@ import registerUser from "../apiServices/user/registerUser.js";
 const buttonRegister = document.querySelector(".buttonRegister");
 console.log(buttonRegister);
 
-const isLecturers = document.querySelector("#pickGV");
-const isStudent = document.querySelector("#pickSV");
+const isLecturers = document.querySelector("#pickGV").checked ? 1 : 0 ;
+const isStudent = document.querySelector("#pickSV").checked ? 1 : 0;
+
+
+console.log(isStudent);
+console.log(isLecturers)
 
 async function handerRegister(e) {
     e.preventDefault()
@@ -23,9 +27,9 @@ async function handerRegister(e) {
         lastName: lastName,
         email: emailRegister,
         password: passwordRegister,
-        codeSudentOrLecturers: personCode,
-        isLecturers: isLecturers.value,
-        isStudent: isStudent.value,
+        codeSudentOrLecturers: personCode,      
+        isLecturers: isLecturers,
+        isStudent: isStudent,
 
     }
     console.log(user);

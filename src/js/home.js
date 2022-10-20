@@ -9,20 +9,20 @@ async function getUser() {
     const idUser = getCookie("idUser")
     const user = await getUserByID(idUser)
 
-    const buttonAvatar = document.getElementsByClassName("buttonAvatar");
+    const buttonAvatar = document.getElementById("buttonAvatar");
     const buttonRegister = document.getElementById("buttonRegister");
     const nameUser = document.getElementById("nameUser");
-    const buttonProfile = document.getElementById("buttonProfile");
+    // const buttonProfile = document.getElementById("buttonProfile");
     if (user) {
-        buttonRegister.style.display = "none !important";
-        buttonAvatar[0].style.display = "block !important";
+        buttonRegister.style.display = "none";
+        buttonAvatar.style.display = "block";
         const fullName = user.firstName + " " + user.lastName;
         nameUser.innerText = fullName;
-
+        console.log(buttonAvatar.style);
     }
 }
+console.log(getUser());
 
-getUser()
 
 async function getDataResearch () {
     const data = await getAllResearch()

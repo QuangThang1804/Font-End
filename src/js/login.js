@@ -11,7 +11,7 @@ async function handerLogin(e) {
     }
     console.log(loginUser)
     const res = await loginUser(user)
-    console.log(res);
+    console.log('res', res)
     if (res) {
         window.location = "/index.html"
     }

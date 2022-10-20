@@ -8,6 +8,7 @@
   <link href="./src/style.css" rel="stylesheet">
   <link rel="stylesheet" href="status.css">
   <title>Web for team 3</title>
+  <!-- <script type="module" src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 </head>
 
 <body class="bg-slate-200">
@@ -42,11 +43,11 @@
             </div>
 
             <a href="register.html" id ="buttonRegister"
-              class="before-login buttonLogin text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Đăng
+              class="before-login text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Đăng
               ký
             </a>
 
-            <img class="buttonAvatar after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
+            <img id = "buttonAvatar" class="after-login w-12 h-12 hover:cursor-pointer rounded-full hidden"
               src="/src/img/Avatar-Facebook-trắng.jpg" alt="Rounded avatar">
 
             <button data-collapse-toggle="mobile-menu-2" type="button"
@@ -184,7 +185,7 @@
               <a href=""
                 class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
                 <i
-                  class=" buttonLogout fa-solid fa-arrow-right-from-bracket w-7 h-7 fill-current inline-block px-1"></i>
+                  class="buttonLogout fa-solid fa-arrow-right-from-bracket w-7 h-7 fill-current inline-block px-1"></i>
                 <span class="">Đăng xuất</span>
               </a>
 
@@ -193,15 +194,7 @@
         </div>
 
       </div>
-<!-- 
-      <script src="js/graph.js" type="text/javascript"></script>
-      <script>
-        var user = document.getElementById("user-chart").nodeName;
-        var chart = new Graph({
-          data: [1, 20, 5, 6, 8],
-          target: document.querySelector(user),
-        });
-      </script> -->
+
     </body>
 
     <!--Begin Content -->
@@ -614,22 +607,22 @@
 
   <script>
     // bật tắt login, avatar và menu user
-    const buttonLogin = document.querySelector('.buttonLogin');
-    const buttonAvatar = document.querySelector('.buttonAvatar');
+    const buttonRegister = document.querySelector('#buttonRegister');
+    const buttonAvatar = document.querySelector('#buttonAvatar');
     const buttonLogout = document.querySelector('.buttonLogout');
     const userMenu = document.querySelector('#view')
 
     function ShowAvatar() {
       buttonAvatar.classList.add('open');
-      buttonLogin.classList.add('hidden');
+      buttonRegister.classList.add('hidden');
     }
 
     function HideAvatar() {
       buttonAvatar.classList.remove('open');
-      buttonLogin.classList.remove('hidden');
+      buttonRegister.classList.remove('hidden');
     }
 
-    // buttonLogin.addEventListener('click', ShowAvatar);
+    //  buttonRegister.addEventListener('click', ShowAvatar);
 
     buttonLogout.addEventListener('click', HideAvatar);
 
@@ -687,11 +680,10 @@
 
     }
   </script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   
-  <script type="module"  src="./src/js/home.js"></script>
-  <script type ="module"  src="./src/js/exam.js"></script>
-  <script type ="module"  src="./src/js/login.js"></script>
+  <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+  <script type="module" src="./src/js/home.js"></script>
+  <script type ="module" src="./src/js/exam.js"></script>
 </body>
 
 </html>

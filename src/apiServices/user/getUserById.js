@@ -8,9 +8,11 @@ import { get } from "../../utils/request.js";
 const getUserById = async (id) => {
   try {
     const idToken = getCookie("idToken");
+    const idUser = getCookie("idUser");
     const res = await get(`/user/${id}`, {
       headers: {
         idtoken: idToken,
+        idUser: idUser
       },
     });
     return res;
