@@ -60,9 +60,7 @@ const getAllExam = async () => {
               </p>
           </div>
         </div>
-        
       </article>`
-
           const div = document.createElement("div")
           div.innerHTML = codeHtml
           container.appendChild(div)
