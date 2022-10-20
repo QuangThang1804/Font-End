@@ -1,4 +1,7 @@
+// import axios from '../../node_modules/axios/dist/axios';
 import 'https://unpkg.com/axios/dist/axios.min.js';
+
+console.log(axios)
 const request = axios.create({
   baseURL: "https://recursive-hamic.herokuapp.com/",
   headers: {
