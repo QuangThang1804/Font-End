@@ -10,6 +10,7 @@ const logoutUser = async () => {
       },
     });
     document.cookie = "idToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "idUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
     return res;
   } catch (error) {
     console.log(error.message);

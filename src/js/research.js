@@ -90,6 +90,21 @@ const getAllResearch = async () => {
                 src=${fileResearch} width="100%" height="600px"
                 allow="autoplay" allowpaymentrequest></iframe>
             </div>
+
+            <div class="reaction max-w-full mx-2 ">
+              <div
+                class="like-block float-left w-1/2 px-4 text-start hover:cursor-pointe hover:underline rounded-lg">
+
+                <p class="text-black"><i class="fa-regular fa-thumbs-up my-2 mx-2"></i>5</p>
+              </div>
+
+              <div
+                class="comment-block float-right w-1/2 px-4 text-end hover:cursor-pointe hover:underline rounded-lg">
+
+                <p class="text-black">9 Comment</p>
+              </div>
+              <div class="clear"></div>
+            </div>
       
             <div class="reaction max-w-full mx-2 mb-2 border-t-1 border-b-1 ">
               <div
