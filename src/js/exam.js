@@ -6,6 +6,7 @@ import getExam from "../apiServices/exam/getAllExam.js"
 // import getExamByName from "../apiServices/exam/getExamByName.js"
 import getImgSchool from "../apiServices/subject/getImgSchool.js"
 import getUserById from "../apiServices/user/getUserById.js"
+import getDepartment from "../apiServices/department/getAllDepartment.js"
 
 async function getUser(id) {
     const user = await getUserById(id)
@@ -29,7 +30,6 @@ const getAllExam = async () => {
             const idSubject = item.idExamSubject
             const imgSchool = await getImgSchool(idSubject)
             const status = item.isPublic
-            console.log("status", status);
             if (status == true) {
             const codeHtml =  `
             <article class="bg-white p-4 rounded-2xl pb-5 mt-5 block mx-3">

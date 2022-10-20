@@ -190,7 +190,6 @@
                           <img class="rounded-3xl" src="./src/img/Avatar-Facebook-trắng.jpg" alt="logo">
                           <div class="details">
                             <p>Phạm Quang Thăng</p>
-
                           </div>
                         </div>
                         <textarea placeholder="Nhập nội dung bài viết của bạn..." spellcheck="false"
@@ -221,16 +220,23 @@
       </div>
     </aside>
     <!-- Backdrop -->
-    <div x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
-      x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-      x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
+    <div x-show="isSideMenuOpen" 
+      x-transition:enter="transition ease-in-out duration-150"
+      x-transition:enter-start="opacity-0" 
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in-out duration-150" 
+      x-transition:leave-start="opacity-100"
       x-transition:leave-end="opacity-0"
-      class="fixed inset-0 z-10 flex items-end bg-transparent bg-opacity-50 sm:items-center sm:justify-center"></div>
-    <aside class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
-      x-show="isSideMenuOpen" x-transition:enter="transition ease-in-out duration-150"
-      x-transition:enter-start="opacity-0 transform -translate-x-20" x-transition:enter-end="opacity-100"
-      x-transition:leave="transition ease-in-out duration-150" x-transition:leave-start="opacity-100"
-      x-transition:leave-end="opacity-0 transform -translate-x-20" @click.away="closeSideMenu"
+      class="inset-0 z-10 flex items-end bg-transparent bg-opacity-50 sm:items-center sm:justify-center"></div>
+    <aside class="thanhben inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
+      x-show="isSideMenuOpen" 
+      x-transition:enter="transition ease-in-out duration-150"
+      x-transition:enter-start="opacity-0 transform -translate-x-20" 
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in-out duration-150" 
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0 transform -translate-x-20" 
+      @click.away="closeSideMenu"
       @keydown.escape="closeSideMenu">
       <div class="py-4 text-gray-500 dark:text-gray-400">
         <ul class="mt-6">
@@ -274,28 +280,24 @@
             </a>
           </li>
 
-
           <li class="relative px-6 py-3 w-full translate-colors rounded-md hover:bg-blue-700 hover:text-white">
-            <button
-              class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 text-black hover:text-white dark:hover:text-gray-200"
-              @click="togglePagesMenu" aria-haspopup="true">
-              <span class="inline-flex items-center">
-                <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
-                  </path>
-                </svg>
-                <span class="ml-4">Pages</span>
-              </span>
+            <a class="inline-flex items-center justify-start w-full text-sm font-semibold transition-colors duration-150 hover:text-white dark:hover:text-gray-200"
+              href="gvPage.html">
+              <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z">
+                </path>
+              </svg>
+              <span class="ml-4">Pages</span>
+            </a>
           </li>
-        </ul>
-
-        <div class="px-6 my-6">
+  
+        <div class=" table px-6 my-6">
           <button type="button"
-            lass="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-400 hover:bg-blue-800 focus:outline-none focus:shadow-outline-purple"
             aria-controls="dropdown1-example" data-collapse-toggle="dropdown1-example"
-            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-400 hover:bg-blue-700 focus:outline-none focus:shadow-outline-purple">
+            class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-400 hover:bg-blue-800 focus:outline-none focus:shadow-outline-purple">
             Tạo đề tài
             <span class="ml-2" aria-hidden="true">+</span>
             </svg>
@@ -409,7 +411,7 @@
                     <td class="px-4 py-3">
                       <div class="flex items-center space-x-4 text-sm">
                         <button
-                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 hover:bg-gray-400 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                           aria-label="Edit">
                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                             <path
@@ -418,7 +420,7 @@
                           </svg>
                         </button>
                         <button
-                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 hover:bg-gray-400 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                           aria-label="Delete">
                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
@@ -471,7 +473,7 @@
                     <td class="px-4 py-3">
                       <div class="flex items-center space-x-4 text-sm">
                         <button
-                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 hover:bg-gray-400 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                           aria-label="Edit">
                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                             <path
@@ -480,7 +482,7 @@
                           </svg>
                         </button>
                         <button
-                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                          class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 hover:bg-gray-500 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                           aria-label="Delete">
                           <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"

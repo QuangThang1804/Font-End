@@ -432,3 +432,25 @@ input[name="name-theme"]:focus, input[name="name-theme"]:active {
 .tox .tox-notification--warn, .tox .tox-notification--warning{
     display: none !important;
 }
+
+.z-20 {
+    width: 20% ;
+}
+@media (max-width: 600px) {
+    .thanhben{
+        margin-top: 100px;
+    }
+}
+
+.table {
+    padding: 0.25rem;
+    overflow-y: scroll;
+    white-space: nowrap;
+    }
+ @media {  
+    span {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    }
+}
