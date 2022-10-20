@@ -14,7 +14,7 @@ async function getUser(id) {
     }
 }
 
-const getAllExam = async () => {
+const getAllDepartment = async () => {
     const data = await getDepartment()
     if(data) {
         const container = document.querySelector(".box__department")
@@ -51,4 +51,4 @@ const getAllExam = async () => {
       }
 }
 
-getAllExam()
+getAllDepartment()
