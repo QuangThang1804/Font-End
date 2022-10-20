@@ -1,4 +1,4 @@
-import axios from ".axios";
+import 'https://unpkg.com/axios/dist/axios.min.js';
 const request = axios.create({
   baseURL: "https://recursive-hamic.herokuapp.com/",
   headers: {

@@ -22,10 +22,11 @@ const getAllExam = async () => {
         
          data.forEach(async(item, index) => {
             
-            const nameExam = item.name
-            const codeHtml =  `
+
+            const nameDepartment = item.name
+            var codeHtml =  `
             <ul class="Khoa">
-              <div class="Ten-khoa"> ${nameExam} <i class="fa-solid fa-caret-down icon-down"></i>
+              <div class="Ten-khoa">Khoa ${nameDepartment} <i class="fa-solid fa-caret-down icon-down"></i>
                <ul class="cac-nganh">
                   <li class="nganh">
                     <p class="ten-nganh">Toán</p>

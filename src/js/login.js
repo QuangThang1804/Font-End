@@ -13,7 +13,7 @@ async function handerLogin(e) {
     const res = await loginUser(user)
     console.log(res);
     if (res) {
-        window.location = "/NCKH.html"
+        window.location = "/index.html"
     }
 }
 
