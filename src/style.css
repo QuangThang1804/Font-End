@@ -441,3 +441,16 @@ input[name="name-theme"]:focus, input[name="name-theme"]:active {
         margin-top: 100px;
     }
 }
+
+.table {
+    padding: 0.25rem;
+    overflow-y: scroll;
+    white-space: nowrap;
+    }
+ @media {  
+    span {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    }
+}
