@@ -14,8 +14,9 @@ async function handerLogin(e) {
     console.log('res', res)
     if (res) {
         window.location = "/index.html"
+    } else {
+        alert("Tài khoản hoặc mật khẩu không đúng! Vui lòng nhâp lại")
     }
 }
-
 
 buttonLogin.addEventListener('click', (e) => handerLogin(e));

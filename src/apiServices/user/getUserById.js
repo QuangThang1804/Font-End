@@ -12,7 +12,6 @@ const getUserById = async (id) => {
     const res = await get(`/user/${id}`, {
       headers: {
         idtoken: idToken,
-        idUser: idUser
       },
     });
     return res;

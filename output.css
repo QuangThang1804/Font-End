@@ -601,10 +601,6 @@ video {
   pointer-events: none;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -834,12 +830,16 @@ video {
   margin-bottom: 1rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
 
-.mr-4 {
-  margin-right: 1rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mb-12 {
@@ -1964,6 +1964,16 @@ video {
 .hover\:bg-teal-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-slate-200:hover {

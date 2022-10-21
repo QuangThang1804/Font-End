@@ -18,10 +18,11 @@ async function getUser() {
         buttonAvatar.style.display = "block";
         const fullName = user.firstName + " " + user.lastName;
         nameUser.innerText = fullName;
-        console.log(buttonAvatar.style);
     }
 }
-console.log(getUser());
+
+
+getUser();
 
 
 async function getDataResearch () {
