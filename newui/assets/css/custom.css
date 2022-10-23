@@ -114,7 +114,7 @@
     content: '\f068'!important;
     font-weight: 900!important;
 }
-input#name-theme{
+input.underline-only{
     width: 200px;
     margin: 0 10px;
     border-bottom: 1px black solid;
