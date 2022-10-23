@@ -14369,7 +14369,31 @@ input[data-switch="dark"]:checked + label {
     vertical-align: middle !important;
 }
 
-.table .table-user img {
+.table .table-id {
+    width: 5%
+}
+
+.table .table-msv {
+    width: 15%
+}
+
+.table .table-name {
+    width: 20%;
+}
+
+.table .table-obj {
+    width: 25%;
+}
+
+.table .table-status {
+    width: 10%;
+}
+
+.table .table-date {
+    width: 10%;
+}
+
+.table .table-name img {
     height: 30px;
     width: 30px;
 }
@@ -14378,7 +14402,7 @@ input[data-switch="dark"]:checked + label {
     color: #98a6ad;
     font-size: 1.2rem;
     display: inline-block;
-    padding: 0 3px;
+    padding: 0 10px;
 }
 
 .table .action-icon:hover {
