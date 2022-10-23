@@ -723,9 +723,10 @@
                                         <i class="fa-regular fa-thumbs-up"></i> 2 Lượt thích
                                     </a>
 
-                                    <a class="comment-button col-6 text-center btn btn-sm btn-link">
+                                    <label class="comment-button col-6 text-center btn btn-sm btn-link"
+                                           for="current-comment">
                                         <i class="fa-solid fa-comment"></i> 2 Bình luận
-                                    </a>
+                                    </label>
 
                                 </div>
 
@@ -760,7 +761,7 @@
                                              class="align-self-start rounded mr-2" alt="Arya Stark">
                                         <form class="media-body mt-1 d-flex flex-row" data-id="1">
                                             <input type="text" class="form-control border-0 form-control-sm flex-grow-1"
-                                                   placeholder="Write a comment">
+                                                   placeholder="Write a comment" id="current-comment">
                                             <button class="border-0 bg-white text-info ml-1" type="submit">
                                                 <i class="fa-regular fa-paper-plane text-22"></i>
                                             </button>
@@ -782,7 +783,7 @@
                             </div>
                             <div class="card-body collapse" id="relative-card">
                                 <div class="card-deck-wrapper">
-                                    <div class="card-deck" >
+                                    <div class="card-deck">
                                         <div id="related-post-1" class="card d-block">
                                             <div class="card-body">
                                                 <h5 class="card-title">Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2
@@ -890,6 +891,7 @@
 <script src="./assets/js/app.js"></script>
 <!-- plugin js -->
 <script src="assets/js/vendor/dropzone.min.js"></script>
+<script src="./assets/js/dropzone.js"></script>
 <script src="./assets/js/custom.js"></script>
 </body>
 </html>

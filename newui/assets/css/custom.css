@@ -114,4 +114,13 @@
     content: '\f068'!important;
     font-weight: 900!important;
 }
+input#name-theme{
+    width: 200px;
+    margin: 0 10px;
+    border-bottom: 1px black solid;
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    outline: none;
+}
 
