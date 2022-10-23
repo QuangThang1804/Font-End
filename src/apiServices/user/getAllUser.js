@@ -2,14 +2,15 @@ import { getCookie } from "../../utils/libCookie.js";
 import { get } from "../../utils/request.js";
 
 /**
- * @param {*} type
+ * 
  * type là kiểu danh sách muốn lấy như student, lecturers
- * Lấy idToken đã lưu khi login để truyền vào làm đối số
+ * Lấy idToken đã lưu khi lofin để truyền vào làm đối số
  */
-const getAlluserByType = async (type) => {
+const getAllUser = async () => {
   try {
     const idToken = getCookie("idToken");
-    const res = await get(`/user/?type=${type}`, {
+    const idUser = getCookie("idUser");
+    const res = await get(`/user`, {
       headers: {
         idtoken: idToken,
       },
@@ -20,4 +21,4 @@ const getAlluserByType = async (type) => {
   }
 };
 
-export default getAlluserByType;
+export default getAllUser;
