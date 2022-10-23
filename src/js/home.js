@@ -25,25 +25,25 @@ async function getUser() {
 getUser();
 
 
-async function getDataResearch () {
-    const data = await getAllResearch()
-    console.log(data);
-}
+// async function getDataResearch () {
+//     const data = await getAllResearch()
+//     console.log(data);
+// }
 
-getDataResearch()
+// getDataResearch()
 
-async function getDataExam () {
-    const data = await getAllExam()
-    console.log(data);  
-}
+// async function getDataExam () {
+//     const data = await getAllExam()
+//     console.log(data);  
+// }
 
-getDataExam()
+// getDataExam()
 
 
-async function getDataDepartment () {
-    const data = await getAllDepartment()
-    console.log(data);  
-}
+// async function getDataDepartment () {
+//     const data = await getAllDepartment()
+//     console.log(data);  
+// }
 
-getDataDepartment()
+// getDataDepartment()
 
