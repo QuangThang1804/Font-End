@@ -52,3 +52,65 @@
     font-weight: 400;
     font-size:1.125rem
 }
+.like-button{
+    border-left: 1px solid #d5d5db;
+    color: #6e7989 !important;
+}
+.like-button:hover{
+    color: #2d3437 !important;
+    background-color: #d5d5db;
+}
+.comment-button{
+    border-left: 1px solid #d5d5db;
+    border-right: 1px solid #d5d5db;
+    color: #6e7989 !important;
+}
+.comment-button:hover{
+    color: #2d3437 !important;
+    background-color: #d5d5db;
+}
+.post-content:not(.expended) {
+    height: 1.7rem;
+    width: calc(100%);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.post-content{
+    text-align: left;
+    color:#474d56;
+    margin:.75rem 0;
+    padding: 0 .75rem;
+    font-size: 1.0125rem;
+}
+.breadcrumb-item + .breadcrumb-item::before, .menu-arrow:before {
+    font-family: 'Font Awesome 6 Free'!important;
+    content: '\F054'!important;
+    font-weight: 900!important;
+}
+.pagination-md .page-link {
+    padding: 0.5rem 1rem;
+    font-size: 1.0625rem;
+    line-height: 1.5;
+}
+
+.pagination-md .page-item:first-child .page-link {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.pagination-md .page-item:last-child .page-link {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+.card .card-widgets>a.collapsed i:before {
+    font-family: 'Font Awesome 6 Free'!important;
+    content: '\2b'!important;
+    font-weight: 900!important;
+    font-style: normal;
+}
+.mdi-minus::before{
+    font-family: 'Font Awesome 6 Free'!important;
+    content: '\f068'!important;
+    font-weight: 900!important;
+}

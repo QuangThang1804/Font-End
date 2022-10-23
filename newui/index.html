@@ -1,13 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/app-creative.min.css">
+    <link rel="stylesheet" href="assets/css/app-creative.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./assets/css/custom.css">
 </head>
 <body data-layout-config='{"leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false}'>
@@ -56,7 +57,7 @@
                     <a href="javascript: void(0);" class="side-nav-link item-link">
                         <i class="fa-solid fa-flask"></i>
                         <span> Khoa hóa </span>
-                        <span class="fa menu-arrow"></span>
+                        <span class="menu-arrow"></span>
                     </a>
                     <ul class="side-nav-second-level item-link" aria-expanded="false">
                         <li>
@@ -71,7 +72,7 @@
                     <a href="javascript: void(0);" class="side-nav-link item-link">
                         <i class="fa-solid fa-computer"></i>
                         <span> Khoa Toán </span>
-                        <span class="fa menu-arrow"></span>
+                        <span class="menu-arrow"></span>
                     </a>
                     <ul class="side-nav-second-level item-link" aria-expanded="false">
                         <li>
@@ -96,7 +97,7 @@
                     <a href="javascript: void(0);" class="side-nav-link item-link">
                         <i class="fa-regular fa-pen-to-square"></i>
                         <span> Đề tài hướng dẫn </span>
-                        <span class="fa menu-arrow"></span>
+                        <span class="menu-arrow"></span>
                     </a>
                     <ul class="side-nav-second-level item-link" aria-expanded="false">
                         <li>
@@ -114,7 +115,7 @@
                     <a href="javascript: void(0);" class="side-nav-link item-link">
                         <i class="fa-solid fa-file-signature"></i>
                         <span> Đề tài chấm điểm </span>
-                        <span class="fa menu-arrow"></span>
+                        <span class="menu-arrow"></span>
                     </a>
                     <ul class="side-nav-second-level item-link" aria-expanded="false">
                         <li>
@@ -139,7 +140,7 @@
                     <a href="javascript: void(0);" class="side-nav-link item-link">
                         <i class="fa-regular fa-pen-to-square"></i>
                         <span> Đề tài tham gia </span>
-                        <span class="fa menu-arrow"></span>
+                        <span class="menu-arrow"></span>
                     </a>
                     <ul class="side-nav-second-level item-link" aria-expanded="false">
                         <li>
@@ -328,8 +329,8 @@
 
             <!-- Start Content-->
             <div class="container-fluid" id="main-content" style="padding: 1rem; height:fit-content">
-                <div class="row">
-                    <div class="col-12">
+                <div id="for-homepage" class="row">
+                    <div id="new-post" class="col-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="media mt-2">
@@ -346,103 +347,487 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div id="new-post-modal" class="modal fade" tabindex="-1" role="dialog"
-                         aria-labelledby="standard-modalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title text-center">Đăng bài</h4>
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="../src/img/Avatar-Facebook-trắng.jpg" alt="table-user"
-                                         class="mr-2 rounded-circle" height="50px">
-                                    <span class="h4 font-weight-semibold text-dark">Phạm Quang Thăng</span>
-                                    <form action="">
+                        <div id="new-post-modal" class="modal fade" tabindex="-1" role="dialog"
+                             aria-labelledby="standard-modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title text-center">Đăng bài</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="../src/img/Avatar-Facebook-trắng.jpg" alt="table-user"
+                                             class="mr-2 rounded-circle" height="50px">
+                                        <span class="h4 font-weight-semibold text-dark">Phạm Quang Thăng</span>
+                                        <form action="">
                                         <textarea class="post-content-edit text-dark"
                                                   placeholder="Thăng ơi, bạn đang nghĩ gì thế?"></textarea>
 
-                                        <div class="edit-post-msc h4">
-                                            <div class="row">
-                                                <div class="col-8">
-                                                    Thêm vào bài viết của bạn:
-                                                </div>
-
-                                                <div class="col-4 d-flex flex-row-reverse align-content-between ">
-                                                    <div class="flex-grow-1"><i class="fa fa-link"></i></div>
-                                                    <div class="flex-grow-1" data-toggle="collapse"
-                                                         href="#dropzone" role="button" aria-expanded="false"
-                                                         aria-controls="dropzone"><i class="fa fa-image"></i>
+                                            <div class="edit-post-msc h4">
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        Thêm vào bài viết của bạn:
                                                     </div>
-                                                    <div class="flex-grow-1" data-toggle="collapse"
-                                                         href="#dropzone" role="button" aria-expanded="false"
-                                                         aria-controls="dropzone"><i class="fa fa-file"></i></div>
-                                                    <div class="flex-grow-1" data-toggle="collapse"
-                                                         href="#dropzone" role="button" aria-expanded="false"
-                                                         aria-controls="dropzone"><i class="fa fa-video"></i></div>
+
+                                                    <div class="col-4 d-flex flex-row-reverse align-content-between ">
+                                                        <div class="flex-grow-1" data-toggle="collapse"
+                                                             href="#dropzone" role="button" aria-expanded="false"
+                                                             aria-controls="dropzone"><i class="fa fa-image"></i>
+                                                        </div>
+                                                        <div class="flex-grow-1" data-toggle="collapse"
+                                                             href="#dropzone" role="button" aria-expanded="false"
+                                                             aria-controls="dropzone"><i class="fa fa-file"></i></div>
+                                                        <div class="flex-grow-1" data-toggle="collapse"
+                                                             href="#dropzone" role="button" aria-expanded="false"
+                                                             aria-controls="dropzone"><i class="fa fa-video"></i></div>
+                                                    </div>
                                                 </div>
+
                                             </div>
+                                            <div class="collapse w-100 mt-2 mb-0" id="dropzone">
+                                                <div class="dropzone"
+                                                     id="myAwesomeDropzone"
+                                                     data-plugin="dropzone"
+                                                     data-previews-container="#file-previews"
+                                                     data-upload-preview-template="#uploadPreviewTemplate">
+                                                    <div class="fallback">
+                                                        <input name="file" type="file" multiple/>
+                                                    </div>
 
-                                        </div>
-                                        <div class="collapse w-100 mt-2 mb-0" id="dropzone">
-                                            <div class="dropzone"
-                                                 id="myAwesomeDropzone"
-                                                 data-plugin="dropzone"
-                                                 data-previews-container="#file-previews"
-                                                 data-upload-preview-template="#uploadPreviewTemplate">
-                                                <div class="fallback">
-                                                    <input name="file" type="file" multiple/>
+                                                    <div class="dz-message needsclick">
+                                                        <i class="h1 text-muted fa-solid fa-cloud-arrow-up"></i>
+                                                        <h3>Kéo file hoặc click vào đây để tải lên.</h3>
+                                                    </div>
                                                 </div>
 
-                                                <div class="dz-message needsclick">
-                                                    <i class="h1 text-muted fa-solid fa-cloud-arrow-up"></i>
-                                                    <h3>Kéo file hoặc click vào đây để tải lên.</h3>
-                                                </div>
-                                            </div>
+                                                <!-- Preview -->
+                                                <div class="dropzone-previews mt-3" id="file-previews"></div>
 
-                                            <!-- Preview -->
-                                            <div class="dropzone-previews mt-3" id="file-previews"></div>
-
-                                            <!-- file preview template -->
-                                            <div class="d-none" id="uploadPreviewTemplate">
-                                                <div class="card mt-1 mb-0 shadow-none border">
-                                                    <div class="p-2">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-auto">
-                                                                <img data-dz-thumbnail src="#"
-                                                                     class="avatar-sm rounded bg-light" alt="">
-                                                            </div>
-                                                            <div class="col pl-0">
-                                                                <a href="javascript:void(0);"
-                                                                   class="text-muted font-weight-bold"
-                                                                   data-dz-name></a>
-                                                                <p class="mb-0" data-dz-size></p>
-                                                            </div>
-                                                            <div class="col-auto">
-                                                                <!-- Button -->
-                                                                <a href=""
-                                                                   class="btn btn-link btn-lg text-muted"
-                                                                   data-dz-remove>
-                                                                    <i class="dripicons-cross"></i>
-                                                                </a>
+                                                <!-- file preview template -->
+                                                <div class="d-none" id="uploadPreviewTemplate">
+                                                    <div class="card mt-1 mb-0 shadow-none border">
+                                                        <div class="p-2">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <img data-dz-thumbnail src="#"
+                                                                         class="avatar-sm rounded bg-light" alt="">
+                                                                </div>
+                                                                <div class="col pl-0">
+                                                                    <a href="javascript:void(0);"
+                                                                       class="text-muted font-weight-bold"
+                                                                       data-dz-name></a>
+                                                                    <p class="mb-0" data-dz-size></p>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <!-- Button -->
+                                                                    <a href=""
+                                                                       class="btn btn-link btn-lg text-muted"
+                                                                       data-dz-remove>
+                                                                        <i class="fa-solid fa-xmark"></i>
+                                                                    </a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary w-100 h3">Đăng bài</button>
-                                </div>
-                            </div><!-- /.modal-content -->
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary w-100 h3">Đăng bài</button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div>
                         </div>
                     </div>
+                    <div id="news-feed" class="col-12">
+                        <div class="card" id="post-id-1">
+                            <div class="card-body pb-1">
+                                <div class="media">
+                                    <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                         alt="Generic placeholder image" height="32">
+                                    <div class="media-body">
+                                        <div class="dropdown float-right text-muted">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                               data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" data-id="1" class="dropdown-item">Sửa</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" data-id="1" class="dropdown-item">Xóa</a>
+                                            </div>
+                                        </div>
+                                        <h5 class="m-0">Đề thi Giải Tích 1 Kỳ 2 năm học 2021-2022</h5>
+                                        <p class="text-muted">
+                                            <small>
+                                                <i class="fa-regular fa-clock pr-1"></i>2022-10-14T17:00:43.125Z
+                                                <span class="mx-2">⚬</span>
+                                                <i class="fa-regular fa-user pr-1"></i>
+                                                <a class="mr-2" href="#">Người đăng: Trịnh Nhật</a>
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
 
+                                <hr class="m-0">
+                                <div class="post-content">
+                                    Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2 năm học 2021-2022
+                                    <br>
+                                    <iframe class="w-100 mt-3" style="height: 50vh"
+                                            data-src="https://drive.google.com/file/d/1QP2HkbqWF7aW0sQ93DJyw41j2Nhse4qo/preview">
+                                    </iframe>
+                                    <!--                                    thêm img or cái gì cx đc-->
+                                </div>
+                                <hr class="m-0">
+
+                                <div class="m-0 row">
+                                    <a href="javascript: void(0);"
+                                       class="like-button col-6 text-center btn btn-sm btn-link pl-0"
+                                       data-id="1">
+                                        <i class="fa-regular fa-thumbs-up"></i> 2 Lượt thích
+                                    </a>
+
+                                    <a class="comment-button col-6 text-center btn btn-sm btn-link"
+                                       data-toggle="collapse" href="#comment-id-1"
+                                       aria-expanded="true" aria-controls="comment-id-1">
+                                        <i class="fa-solid fa-comment"></i> 2 Bình luận
+                                    </a>
+
+                                </div>
+
+                                <hr class="m-0">
+
+                                <div class="mt-3 collapse" id="comment-id-1">
+                                    <div class="media">
+                                        <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                             alt="Generic placeholder image" height="40px">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Nguyễn Văn B </h5>
+
+                                            <p class="my-1">Ôi!!! Mình tìm bài này mãi</p>
+
+                                        </div> <!-- end media-body -->
+                                    </div>
+                                    <div class="media">
+                                        <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                             alt="Generic placeholder image" height="40px">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Phạm Văn A</h5>
+
+                                            <p class="my-1">Đề này khó quá, ai có cách giải không ạ?</p>
+
+                                        </div> <!-- end media-body -->
+                                    </div> <!-- end media-->
+
+                                    <hr>
+
+                                    <div class="media mb-2">
+                                        <img src="../src/img/logo-hus.png" height="40px"
+                                             class="align-self-start rounded mr-2" alt="Arya Stark">
+                                        <form class="media-body mt-1 d-flex flex-row" data-id="1">
+                                            <input type="text" class="form-control border-0 form-control-sm flex-grow-1"
+                                                   placeholder="Write a comment">
+                                            <button class="border-0 bg-white text-info ml-1" type="submit">
+                                                <i class="fa-regular fa-paper-plane text-22"></i>
+                                            </button>
+                                        </form> <!-- end medi-body -->
+                                    </div> <!-- end media-->
+
+                                </div>
+                            </div> <!-- end card-body -->
+
+                        </div>
+                        <div class="card" id="post-id-2">
+                            <div class="card-body pb-1">
+                                <div class="media">
+                                    <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                         alt="Generic placeholder image" height="32">
+                                    <div class="media-body">
+                                        <div class="dropdown float-right text-muted">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                               data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" data-id="2" class="dropdown-item">Sửa</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" data-id="2" class="dropdown-item">Xóa</a>
+                                            </div>
+                                        </div>
+                                        <h5 class="m-0">Đề thi Giải Tích 1 Kỳ 1 năm học 2021-2022</h5>
+                                        <p class="text-muted">
+                                            <small>
+                                                <i class="fa-regular fa-clock pr-1"></i>2022-10-14T17:00:43.125Z
+                                                <span class="mx-2">⚬</span>
+                                                <i class="fa-regular fa-user pr-1"></i>
+                                                <a class="mr-2" href="#">Người đăng: Trịnh Nhật</a>
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <hr class="m-0">
+                                <div class="post-content">
+                                    Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 1 năm học 2021-2022
+                                    <br>
+                                    <iframe class="w-100 mt-3" style="height: 50vh"
+                                            data-src="https://drive.google.com/file/d/1QP2HkbqWF7aW0sQ93DJyw41j2Nhse4qo/preview">
+                                    </iframe>
+                                    <!--                                    thêm img or cái gì cx đc-->
+                                </div>
+                                <hr class="m-0">
+
+                                <div class="m-0 row">
+                                    <a href="javascript: void(0);" data-id="2"
+                                       class="like-button col-6 text-center btn btn-sm btn-link pl-0">
+                                        <i class="fa-regular fa-thumbs-up"></i> 2 Lượt thích
+                                    </a>
+
+                                    <a class="comment-button col-6 text-center btn btn-sm btn-link"
+                                       data-toggle="collapse" href="#comment-id-2"
+                                       aria-expanded="true" aria-controls="comment-id-2">
+                                        <i class="fa-solid fa-comment"></i> 2 Bình luận
+                                    </a>
+
+                                </div>
+
+                                <hr class="m-0">
+
+                                <div class="mt-3 collapse" id="comment-id-2">
+                                    <div class="media">
+                                        <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                             alt="Generic placeholder image" height="40px">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Nguyễn Văn B </h5>
+
+                                            <p class="my-1">Ôi!!! Mình tìm bài này mãi</p>
+
+                                        </div> <!-- end media-body -->
+                                    </div>
+                                    <div class="media">
+                                        <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                             alt="Generic placeholder image" height="40px">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Phạm Văn A</h5>
+
+                                            <p class="my-1">Đề này khó quá, ai có cách giải không ạ?</p>
+
+                                        </div> <!-- end media-body -->
+                                    </div> <!-- end media-->
+
+                                    <hr>
+
+                                    <div class="media mb-2">
+                                        <img src="../src/img/logo-hus.png" height="40px"
+                                             class="align-self-start rounded mr-2" alt="Arya Stark">
+                                        <form class="media-body mt-1 d-flex flex-row" data-id="2">
+                                            <input type="text" class="form-control border-0 form-control-sm flex-grow-1"
+                                                   placeholder="Write a comment">
+                                            <button class="border-0 bg-white text-info ml-1" type="submit">
+                                                <i class="fa-regular fa-paper-plane text-22"></i>
+                                            </button>
+                                        </form><!-- end medi-body -->
+                                    </div> <!-- end media-->
+
+                                </div>
+                            </div> <!-- end card-body -->
+
+                        </div>
+                    </div>
+                    <div id="pagination" class="col-12">
+                        <div class="page-title-box"></div>
+                        <div class="page-title">
+                            <nav aria-label="Pagination">
+                                <ul class="pagination pagination-md justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="javascript: void(0);" tabindex="-1">
+                                            <i class="fa-solid fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="javascript: void(0);">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript: void(0);">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="javascript: void(0);">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="javascript: void(0);">
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div id="detail-post" class="row">
+                    <div id="breadcrumb" class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb font-weight-semibold">
+                                        <li class="breadcrumb-item"><a href="#">Đề thi</a></li>
+                                        <li class="breadcrumb-item"><a href="#">KHTN</a></li>
+                                        <li class="breadcrumb-item active text-dark" aria-current="page">Đề thi của
+                                            Nhật
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="post-only" class="col-12">
+                        <div class="card" id="post-detail">
+                            <div class="card-body pb-1">
+                                <div class="media">
+                                    <img class="mr-2 rounded" src="../src/img/avatar.jpg"
+                                         alt="Generic placeholder image" height="32">
+                                    <div class="media-body">
+                                        <div class="dropdown float-right text-muted">
+                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
+                                               data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" data-id="1" class="dropdown-item">Sửa</a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" data-id="1" class="dropdown-item">Xóa</a>
+                                            </div>
+                                        </div>
+                                        <h5 class="m-0">Trịnh Nhật</h5>
+                                        <p class="text-muted">
+                                            <small>
+                                                <i class="fa-regular fa-clock pr-1"></i>2022-10-14T17:00:43.125Z
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <hr class="m-0">
+                                <div class="mx-2 py-2 text-left text-dark" style="font-size: 1.0125rem">
+                                    Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2 năm học 2021-2022
+                                    <br>
+                                    <iframe class="w-100 mt-3" style="height: 50vh"
+                                            src="https://drive.google.com/file/d/1QP2HkbqWF7aW0sQ93DJyw41j2Nhse4qo/preview">
+                                    </iframe>
+                                    <!--                                    thêm img or cái gì cx đc-->
+                                </div>
+                                <hr class="m-0">
+
+                                <div class="m-0 row">
+                                    <a href="javascript: void(0);"
+                                       class="like-button col-6 text-center btn btn-sm btn-link pl-0"
+                                       data-id="1">
+                                        <i class="fa-regular fa-thumbs-up"></i> 2 Lượt thích
+                                    </a>
+
+                                    <a class="comment-button col-6 text-center btn btn-sm btn-link">
+                                        <i class="fa-solid fa-comment"></i> 2 Bình luận
+                                    </a>
+
+                                </div>
+
+                                <hr class="m-0">
+
+                                <div class="mt-3">
+                                    <div class="media">
+                                        <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                             alt="Generic placeholder image" height="40px">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Nguyễn Văn B </h5>
+
+                                            <p class="my-1">Ôi!!! Mình tìm bài này mãi</p>
+
+                                        </div> <!-- end media-body -->
+                                    </div>
+                                    <div class="media">
+                                        <img class="mr-2 rounded" src="../src/img/logo-hus.png"
+                                             alt="Generic placeholder image" height="40px">
+                                        <div class="media-body">
+                                            <h5 class="m-0">Phạm Văn A</h5>
+
+                                            <p class="my-1">Đề này khó quá, ai có cách giải không ạ?</p>
+
+                                        </div> <!-- end media-body -->
+                                    </div> <!-- end media-->
+
+                                    <hr>
+
+                                    <div class="media mb-2">
+                                        <img src="../src/img/logo-hus.png" height="40px"
+                                             class="align-self-start rounded mr-2" alt="Arya Stark">
+                                        <form class="media-body mt-1 d-flex flex-row" data-id="1">
+                                            <input type="text" class="form-control border-0 form-control-sm flex-grow-1"
+                                                   placeholder="Write a comment">
+                                            <button class="border-0 bg-white text-info ml-1" type="submit">
+                                                <i class="fa-regular fa-paper-plane text-22"></i>
+                                            </button>
+                                        </form> <!-- end medi-body -->
+                                    </div> <!-- end media-->
+
+                                </div>
+                            </div> <!-- end card-body -->
+
+                        </div>
+                    </div>
+                    <div id="relative" class="col-12">
+                        <div class="card">
+
+                            <div class="card-header text-dark text-center h3">Tài liệu liên quan</div>
+                            <div class="card-widgets">
+                                <a data-toggle="collapse" href="#relative-card" role="button" aria-expanded="false"
+                                   aria-controls="relative-card"><i class="mdi mdi-minus"></i></a>
+                            </div>
+                            <div class="card-body collapse" id="relative-card">
+                                <div class="card-deck-wrapper">
+                                    <div class="card-deck" >
+                                        <div id="related-post-1" class="card d-block">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2
+                                                    năm học 2021-2022</h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">2022-10-14T17:00:43.125Z</small>
+                                                    <iframe class="w-100 mt-3" style="height: 25vh"
+                                                            data-src="https://drive.google.com/file/d/1QP2HkbqWF7aW0sQ93DJyw41j2Nhse4qo/preview">
+                                                    </iframe>
+                                                    <!--                                    thêm img or cái gì cx đc-->
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="related-post-2" class="card d-block">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2
+                                                    năm học 2021-2022</h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">2022-10-14T17:00:43.125Z</small>
+                                                    <iframe class="w-100 mt-3" style="height: 25vh"
+                                                            data-src="https://drive.google.com/file/d/1QP2HkbqWF7aW0sQ93DJyw41j2Nhse4qo/preview">
+                                                    </iframe>
+                                                    <!--                                    thêm img or cái gì cx đc-->
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="related-post-3" class="card d-block">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Đề thi và đáp án tham khảo môn Giải Tích 1 kỳ 2
+                                                    năm học 2021-2022</h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">2022-10-14T17:00:43.125Z</small>
+                                                    <iframe class="w-100 mt-3" style="height: 25vh"
+                                                            data-src="https://drive.google.com/file/d/1QP2HkbqWF7aW0sQ93DJyw41j2Nhse4qo/preview">
+                                                    </iframe>
+                                                    <!--                                    thêm img or cái gì cx đc-->
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- container -->
@@ -523,14 +908,36 @@
 </script>
 
 <script>
-    $(window).on('resize', function () {
-        var size = $(".footer").height() + $("#main-content").height();
-        $(".content-page").height(size + "px")
-    });
     $(document).ready(function () {
-        $(window).trigger('resize');
+        function changeSize() {
+            $(".content-page").height(($(".footer").height() + $("#main-content").height()) + "px")
+        }
+
+        $(window).on('resize', function () {
+            changeSize()
+        });
+        changeSize()
+        var observer = new MutationObserver(function () {
+            changeSize()
+        });
+        observer.observe($(".content-page")[0], {characterData: true, childList: true, attributes: true, subtree: true})
     });
 </script>
-
+<script>
+    $(document).ready(function () {
+        $(document).on('click', '.like-button', function () {
+            $(this).children("i").toggleClass("text-danger")
+            // ajax send like
+        });
+        $(document).on('click', '.post-content', function () {
+            $(this).toggleClass("expended")
+            if ($(this).hasClass("expended")) {
+                $(this).children("iframe").prop("src", function () {
+                    return $(this).data("src");
+                })
+            }
+        })
+    })
+</script>
 </body>
 </html>
