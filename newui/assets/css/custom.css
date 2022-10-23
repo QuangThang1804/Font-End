@@ -123,4 +123,39 @@ input.underline-only{
     border-right-style: hidden;
     outline: none;
 }
+.fa-solid.fa-download{
+    color:#474d56;
+}
+i.fa-solid.fa-download:hover{
+    height:35px;
+    width:35px;
+    border-radius: 2em;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 0.4rem 0.5rem 0 0.5rem;
 
+    background-color: #ffffff;
+}
+.fa-solid.fa-download{
+    height:35px;
+    width:35px;
+    color:#474d56;
+}
+i.fa-solid.fa-download:hover{
+    border-radius: 2em;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 0.4rem 0.5rem 0 0.5rem;
+
+    background-color: #ffffff;
+}
+.fa-solid.fa-trash-can{
+    height:35px;
+    width:35px;
+    color: #fa6767 !important;
+}
+i.fa-solid.fa-trash-can:hover{
+    border-radius: 2em;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    color: #f81d1d !important;
+    background-color: #ffffff;
+}

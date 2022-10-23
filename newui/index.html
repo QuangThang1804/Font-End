@@ -174,6 +174,18 @@
                         <span> Quản lý đề tài </span>
                     </a>
                 </li>
+                <li class="side-nav-item item-link">
+                    <a href="#" class="side-nav-link item-link">
+                        <i class="fa-solid fa-file-circle-question"></i>
+                        <span> Quản lý đề thi </span>
+                    </a>
+                </li>
+                <li class="side-nav-item item-link">
+                    <a href="#" class="side-nav-link item-link">
+                        <i class="fa-solid fa-school"></i>
+                        <span> Quản lý khoa </span>
+                    </a>
+                </li>
             </ul>
             <!-- end Help Box -->
             <!-- End Sidebar -->
@@ -670,7 +682,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="detail-post" class="row">
+                <div id="for-detail-post" class="row">
                     <div id="breadcrumb" class="col-12">
                         <div class="page-title-box">
                             <div class="page-title">
@@ -841,7 +853,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="createNCKH" class="row">
+                <div id="for-createNCKH" class="row">
                     <div class="col-12">
                         <div class="page-title-box">
                             <div class="page-title h4 text-dark">Tạo đề tài nghiên cứu khoa học</div>
@@ -883,7 +895,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="tham-gia-huong-dan" class="row">
+                <div id="for-tham-gia-huong-dan" class="row">
                     <div class="col-12">
                         <div class="page-title-box">
                             <div class="page-title h4 text-dark">Đề tài tham gia nghiên cứu/hướng dẫn</div>
@@ -1133,6 +1145,13 @@
                                                         <i class="fa-solid fa-download"></i>
                                                     </a>
                                                 </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="#"
+                                                       class="btn btn-link btn-lg text-muted">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1157,6 +1176,13 @@
                                                     <a href="#" download=""
                                                        class="btn btn-link btn-lg text-muted">
                                                         <i class="fa-solid fa-download"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="#"
+                                                       class="btn btn-link btn-lg text-muted">
+                                                        <i class="fa-solid fa-trash-can"></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -1185,6 +1211,13 @@
                                                         <i class="fa-solid fa-download"></i>
                                                     </a>
                                                 </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="#"
+                                                       class="btn btn-link btn-lg text-muted">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1211,16 +1244,96 @@
                                                         <i class="fa-solid fa-download"></i>
                                                     </a>
                                                 </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="#"
+                                                       class="btn btn-link btn-lg text-muted">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- end file -->
+                                    <!-- link -->
+                                    <div class="card mb-1 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm">
+                                                            <span class="avatar-title rounded h3">
+                                                                <i class="fa-solid fa-link"></i>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col pl-0">
+                                                    <a href="#" class="text-muted font-weight-bold">github.com</a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <!-- Button -->
+                                                    <a href="#"
+                                                       class="btn btn-link btn-lg text-muted">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end link -->
+                                    <div class="card shadow-none border-0" id="dropzone-for-project">
+                                        <div class="dropzone"
+                                             id="myAwesomeDropzone1"
+                                             data-plugin="dropzone"
+                                             data-previews-container="#file-previews1"
+                                             data-upload-preview-template="#uploadPreviewTemplate1">
+                                            <div class="fallback">
+                                                <input name="file" type="file" multiple/>
+                                            </div>
+
+                                            <div class="dz-message needsclick">
+                                                <i class="h1 text-muted fa-solid fa-cloud-arrow-up"></i>
+                                                <h3>Kéo file hoặc click vào đây để tải lên.</h3>
+                                            </div>
+                                        </div>
+                                        <!-- Preview -->
+                                        <div class="dropzone-previews mt-3" id="file-previews1"></div>
+                                        <!-- file preview template -->
+                                        <div class="d-none" id="uploadPreviewTemplate1">
+                                            <div class="card mt-1 mb-0 shadow-none border">
+                                                <div class="p-2">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-auto">
+                                                            <img data-dz-thumbnail src="#"
+                                                                 class="avatar-sm rounded bg-light" alt="">
+                                                        </div>
+                                                        <div class="col pl-0">
+                                                            <a href="javascript:void(0);"
+                                                               class="text-muted font-weight-bold"
+                                                               data-dz-name></a>
+                                                            <p class="mb-0" data-dz-size></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <!-- Button -->
+                                                            <a href=""
+                                                               class="btn btn-link btn-lg text-muted"
+                                                               data-dz-remove>
+                                                                <i class="fa-solid fa-xmark"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-1 shadow-none border text-dark">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="cham-diem-de-tai" class="row">
+                <div id="for-cham-diem-de-tai" class="row">
                     <div class="col-12">
                         <div class="page-title-box">
                             <div class="page-title h4 text-dark">Chấm điểm đề tài nghiên cứu khoa học</div>
@@ -1317,12 +1430,15 @@
                                 </div>
                                 <div class="card-body">
                                     <form>
-                                        <div class="row h5 align-items-lg-center" style="margin-left: 0.4rem; margin-bottom: 0.5rem">
+                                        <div class="row h5 align-items-lg-center"
+                                             style="margin-left: 0.4rem; margin-bottom: 0.5rem">
                                             <label class="font-weight-semibold text-dark mt-2">Điểm:</label>
-                                            <span class="input-group bootstrap-touchspin bootstrap-touchspin-injected ml-2"
-                                            style="width:10rem">
+                                            <span
+                                                class="input-group bootstrap-touchspin bootstrap-touchspin-injected ml-2"
+                                                style="width:10rem">
                                                 <input data-toggle="touchspin" value="5.0" type="text" data-step="0.25"
-                                                data-decimals="2" data-bts-max="10" data-bts-min="0" class="form-control">
+                                                       data-decimals="2" data-bts-max="10" data-bts-min="0"
+                                                       class="form-control">
                                             </span>
                                         </div>
 
@@ -1450,6 +1566,24 @@
                                         </div>
                                     </div>
                                     <!-- end file -->
+                                    <!-- link -->
+                                    <div class="card mb-1 shadow-none border">
+                                        <div class="p-2">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="avatar-sm">
+                                                            <span class="avatar-title rounded h3">
+                                                                <i class="fa-solid fa-link"></i>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col pl-0">
+                                                    <a href="#" class="text-muted font-weight-bold">github.com</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end link -->
                                 </div>
                             </div>
                         </div>
