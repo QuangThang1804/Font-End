@@ -333,12 +333,7 @@
                 <!-- Start Content-->
                 <div class="container-fluid" id="main-content" style="padding: 1rem; height:fit-content">
                     <div class="page-title-right">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb font-weight-semibold">
-                                <li class="breadcrumb-item"><a href="#">Trang admin</a></li>
-                                <li class="breadcrumb-item active text-dark" aria-current="page">Quản lý giáo viên</li>
-                            </ol>
-                        </nav>
+                        Quản lý giáo viên/sinh viên
                     </div>
                     <table class="table table-striped table-centered mb-0">
                         <thead>
@@ -346,7 +341,6 @@
                                 <th>ID</th>
                                 <th>Mã sinh viên</th>
                                 <th>Họ và tên</th>
-                                <th>Đề tài</th>
                                 <th>Trạng thái</th>
                                 <th>Ngày đăng</th>
                                 <th>Actions</th>
@@ -357,11 +351,20 @@
                                 <td class="table-id">1</td>
                                 <td class="table-msv">2100695</td>
                                 <td class="table-name">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqOPXLlEkB6XnnKpTJSjvEJK3gpfmf8RpotA&usqp=CAU"
-                                        alt="user" class="mr-2 rounded-circle">
-                                    Minh Ngọc
+                                    <div class="d-flex flex-row">
+                                        <div class="flex-grow-0 mr-2">
+                                            <img class="object-cover w-full h-full rounded-full"
+                                                src="https://kenh14cdn.com/QuickNewsK14/4071215/2015/02/img_201502231923258226.jpg"
+                                                alt="" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="font-semibold my-0">Minh Ngọc</p>
+                                            <p class="typeOfPerson my-0" class="text-xs text-gray-600 ">
+                                                Sinh viên
+                                            </p>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td class="table-obj">Null</td>
                                 <td class="table-status">
                                     <span
                                         class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700">
@@ -372,18 +375,28 @@
                                 <td class="table-action">
                                     <a href="javascript: void(0);" class="action-icon"> <i
                                             class="fa fa-light fa-pen"></i></a>
-                                    <a href="javascript: void(0);" class="action-icon"> <i class="fa fa-solid fa-trash"></i></a>
+                                    <a href="javascript: void(0);" class="action-icon"> <i
+                                            class="fa fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                             <tr id="row-2">
                                 <td class="table-id">2</td>
                                 <td class="table-msv">2100345</td>
                                 <td class="table-name">
-                                    <img src="https://kenh14cdn.com/QuickNewsK14/4071215/2015/02/img_201502231923258226.jpg"
-                                        alt="user" class="mr-2 rounded-circle">
-                                    Quang Thăng
+                                    <div class="d-flex flex-row">
+                                        <div class="flex-grow-0 mr-2">
+                                            <img class="object-cover w-full h-full rounded-full"
+                                                src="https://kenh14cdn.com/QuickNewsK14/4071215/2015/02/img_201502231923258226.jpg"
+                                                alt="" />
+                                        </div>
+                                        <div class="flex-1">
+                                            <p class="font-semibold my-0">Quang Thăng</p>
+                                            <p class="typeOfPerson my-0" class="text-xs text-gray-600 ">
+                                                Sinh viên
+                                            </p>
+                                        </div>
+                                    </div>
                                 </td>
-                                <td class="table-obj">Null</td>
                                 <td class="table-status">
                                     <span
                                         class="px-2 py-1 font-semibold leading-tight text-red-700 bg-red-100 rounded-full dark:text-red-100 dark:bg-red-700">
@@ -394,62 +407,64 @@
                                 <td class="table-action">
                                     <a href="javascript: void(0);" class="action-icon"> <i
                                             class="fa fa-light fa-pen"></i></a>
-                                    <a href="javascript: void(0);" class="action-icon"> <i class="fa fa-solid fa-trash"></i></a>
+                                    <a href="javascript: void(0);" class="action-icon"> <i
+                                            class="fa fa-solid fa-trash"></i></a>
                                 </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </tr>  
+                        </tbody> 
+                    </table>     
                 </div>
-                <!-- container -->
-
             </div>
-            <!-- content -->
-            <hr style="opacity: 0">
-            <!-- Footer Start -->
-            <footer class="footer bg-light">
-                <div class="container-fluid" style="color: black;">
-                    <div class="row ">
-                        <div class="col-xl-8 col-md-6 col-sm-12">
-                            <div class="font-weight-bold h3">Hanoi University of Science</div>
-                            <div class="font-weight-bold h4">HUS Applied Mathematics Informatics Club</div>
-                            <div class="d-flex flex-row justify-content-around justify-content-md-start">
-                                <div class="circle" style="color: #38bdf8"><i class="fa-brands fa-twitter"></i></div>
-                                <div class="circle" style="color: #0284c7"><i class="fa-brands fa-facebook"></i></div>
-                                <div class="circle" style="color: #24292f"><i class="fa-brands fa-github"></i></div>
-                            </div>
+            <!-- container -->
+
+        </div>
+        <!-- content -->
+        <hr style="opacity: 0">
+        <!-- Footer Start -->
+        <footer class="footer bg-light">
+            <div class="container-fluid" style="color: black;">
+                <div class="row ">
+                    <div class="col-xl-8 col-md-6 col-sm-12">
+                        <div class="font-weight-bold h3">Hanoi University of Science</div>
+                        <div class="font-weight-bold h4">HUS Applied Mathematics Informatics Club</div>
+                        <div class="d-flex flex-row justify-content-around justify-content-md-start">
+                            <div class="circle" style="color: #38bdf8"><i class="fa-brands fa-twitter"></i></div>
+                            <div class="circle" style="color: #0284c7"><i class="fa-brands fa-facebook"></i></div>
+                            <div class="circle" style="color: #24292f"><i class="fa-brands fa-github"></i></div>
                         </div>
-                        <div class="col-xl-4 col-md-6 col-sm-12 row justify-content-between">
-                            <div class="col-6">
-                                <div class="text-left text-uppercase font-weight-semibold">
-                                    TEAM RECURSIVE
-                                </div>
-                                <ul class="text-left list-unstyled ml-2">
-                                    <li>Công Ving</li>
-                                    <li>La Thư</li>
-                                    <li>Minh Nhật</li>
-                                    <li>Minh Ngọc</li>
-                                    <li>Quang Thăng</li>
-                                </ul>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-sm-12 row justify-content-between">
+                        <div class="col-6">
+                            <div class="text-left text-uppercase font-weight-semibold">
+                                TEAM RECURSIVE
                             </div>
-                            <div class="col-6">
-                                <div class="text-left text-uppercase font-weight-semibold text-md-right">
-                                    HELP AND SUPPORT
-                                </div>
-                                <ul class="text-left list-unstyled text-md-right ml-2 mr-md-2">
-                                    <li>VAIS</li>
-                                    <li>Anh Quang Anh</li>
-                                    <li>Tiến Việt</li>
-                                    <li>HAMIC</li>
-                                </ul>
+                            <ul class="text-left list-unstyled ml-2">
+                                <li>Công Ving</li>
+                                <li>La Thư</li>
+                                <li>Minh Nhật</li>
+                                <li>Minh Ngọc</li>
+                                <li>Quang Thăng</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-left text-uppercase font-weight-semibold text-md-right">
+                                HELP AND SUPPORT
                             </div>
+                            <ul class="text-left list-unstyled text-md-right ml-2 mr-md-2">
+                                <li>VAIS</li>
+                                <li>Anh Quang Anh</li>
+                                <li>Tiến Việt</li>
+                                <li>HAMIC</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </footer>
-            <!-- end Footer -->
+        </footer>
+        <!-- end Footer -->
 
-        </div>
+    </div>
     </div>
 
     <!-- ============================================================== -->
