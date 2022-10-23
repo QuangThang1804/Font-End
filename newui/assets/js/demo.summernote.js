@@ -7,7 +7,7 @@
 
     e.prototype.init = function () {
         n("#summernote-basic").summernote({
-            placeholder: "Write something...",
+            placeholder: "Viết giới thiệu, tóm tắt đề tài...",
             height: 230,
             callbacks: {
                 onInit: function (e) {
@@ -16,6 +16,14 @@
             }
         }),n("#summernote-basic-2").summernote({
             placeholder: "Write something...",
+            height: 230,
+            callbacks: {
+                onInit: function (e) {
+                    n(e.editor).find(".custom-control-description").addClass("custom-control-label").parent().removeAttr("for")
+                }
+            }
+        }),n("#summernote-basic-3").summernote({
+            placeholder: "Viết bình luận...",
             height: 230,
             callbacks: {
                 onInit: function (e) {
