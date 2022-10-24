@@ -75,9 +75,10 @@ const getDataExamSearch = async (name) => {
 }
 
 const elementSearchExam = document.querySelector(".search__exam")
-elementSearchExam.addEventListener("keypress", (e) => {
+elementSearchExam.addEventListener("keyup", (e) => {
   const name = e.target.value
-  if (e.key === "Enter") {
+  console.log(name)
+  if (name.trim()) {
     getDataExamSearch(name)
   }
 })
