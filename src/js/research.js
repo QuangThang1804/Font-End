@@ -176,10 +176,11 @@ const getDataResearchSearch = async (name) => {
 
 
 const elementSearchResearch = document.querySelector(".search__research")
-elementSearchResearch.addEventListener("keyup", (e) => {
-  const name = e.target.value
-  console.log(name);
-  if(name.trim()) {
+elementSearchResearch.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    const name = e.target.value
+    e.preventDefault()
+    console.log(name)
     getDataResearchSearch(name)
   }
 })
