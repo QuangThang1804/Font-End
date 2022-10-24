@@ -1,5 +1,5 @@
-import getUserById from "../apiServices/user/getUserById";
-import getAllExam from "../apiServices/exam/getAllExam";
+import getUserById from "../apiServices/user/getUserById.js";
+import getAllExam from "../apiServices/exam/getAllExam.js";
 
 
 async function getUser(id) {

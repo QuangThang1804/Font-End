@@ -31,7 +31,7 @@ const getDataResearchSearch = async (name) => {
             const fullName = `${user.firstName} ${user.lastName}`
             const nameResearch = item.name
             const descResearch = item.desc
-            const avatar = await getAvatarUser("63497babfd3001fab0dde337")
+            const avatar = await getAvatarUser(item.idUser)
             const fileResearch = await getFileResearchbyId(item._id)
             const codeHtml =  `<div class="viewer1 shadow-2xl float-left w-50 bg-slate-50 rounded-2xl mt-5 my-8">
 

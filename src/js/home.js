@@ -8,6 +8,7 @@ import getAllDepartment from "../apiServices/department/getAllDepartment.js"
 async function getUser() {
     const idUser = getCookie("idUser")
     const user = await getUserByID(idUser)
+    console.log(user);
 
     const buttonAvatar = document.getElementById("buttonAvatar");
     const buttonRegister = document.getElementById("buttonRegister");
