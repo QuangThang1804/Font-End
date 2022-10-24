@@ -2,6 +2,8 @@ import allUserByType from "../apiServices/user/getAllUserByType.js";
 import getUserById from "../apiServices/user/getUserById.js";
 import { getCookie } from "../utils/libCookie.js";
 import getAllUser from "../apiServices/user/getAllUser.js"
+import deleteUser from "../apiServices/user/deleteUser.js";
+import getAvatarUser from "../apiServices/user/getAvatarUser.js";
 
 const person = document.getElementsByClassName("person1");
 
@@ -14,12 +16,6 @@ async function getAllUserByType(type) {
   // console.log(users);
 }
 
-async function renderPeople() {
-  const allStudent = await getAllUser();
-  console.log(allStudent);
-}
-renderPeople();
-
 const buttonStudent = document.querySelector("#buttonStudent");
 console.log(buttonStudent);
 
@@ -30,6 +26,9 @@ async function renderStudent() {
     const maSV = item.codeSudentOrLecturers;
     const fullName = `${item.firstName} ${item.lastName}`;
     const typePeople = (item.isStudent) ? "Sinh viên" : "Giảng viên";
+    // const avatar = await getAvatarUser(item.idUser)
+    
+    
     const codeHtml = `
 <tr class="text-gray-700 dark:text-gray-400">
 <td class="px-4 py-3 text-sm">
@@ -45,7 +44,7 @@ async function renderStudent() {
     <!-- Avatar with inset shadow -->
     <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
       <img class="object-cover w-full h-full rounded-full"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqOPXLlEkB6XnnKpTJSjvEJK3gpfmf8RpotA&usqp=CAU"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqOPXLlEkB6XnnKpTJSjvEJK3gpfmf8RpotA&usqp=CAU"
         alt="" loading="lazy" />
       <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
     </div>
@@ -80,7 +79,7 @@ async function renderStudent() {
         </path>
       </svg>
     </button>
-    <button
+    <button id = "buttonDelete"
       class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
       aria-label="Delete">
       <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -96,6 +95,13 @@ async function renderStudent() {
     const tr = document.createElement("tr")
     tr.innerHTML = codeHtml;
     table.appendChild(tr);
+
+    const buttonDelete = document.querySelector("#buttonDelete");
+    buttonDelete.onclick = async function deleteSomeOne() {
+      const deleteU = await deleteUser(item._id);
+      console.log(deleteU);
+      tr.style.display = "none";
+    };
   });
 }
 
