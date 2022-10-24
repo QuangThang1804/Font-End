@@ -14,24 +14,23 @@ async function getUser(id) {
         return user
     }
 }
-// console.log("dsgfjsdg");
 
-// const getDataExamSearch = async () => {
-//   const elementSearchExan = document.querySelector(".search__exam")
-//   const textSearch = elementSearchExan.value;
-//   const dataExan = await getExamByName(textSearch)
-//   const dataPublic = []
-//   dataExan.forEach(item => {
-//     if(item.idPublic) {
-//       dataPublic.push(item)
-//     }
-//   })
-//   console.log(dataPublic);
-// }
+const getDataExamSearch = async () => {
+  const elementSearchExan = document.querySelector(".search__exam")
+  const textSearch = elementSearchExan.value;
+  const dataExan = await getExamByName(textSearch)
+  const dataPublic = []
+  dataExan.forEach(item => {
+    if(item.idPublic) {
+      dataPublic.push(item)
+    }
+  })
+  console.log(dataPublic);
+}
 
-// const elementSearchExan = document.querySelector(".search__exam")
-// console.log(elementSearchExan);
-// elementSearchExan.addEventListener("keyup", () => console.log("djgfdjg"))
+const elementSearchExan = document.querySelector(".search__exam")
+console.log(elementSearchExan);
+elementSearchExan.addEventListener("keyup", () => getDataExamSearch())
 
 const getAllExam = async () => {
     const data = await getExam()
