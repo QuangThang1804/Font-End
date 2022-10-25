@@ -12,6 +12,7 @@ async function getAllUserByType(type) {
   // console.log(users);
 }
 
+const test = () => console.log("sdfgdsyh");
 
 // render danh sách sinh viên
 const buttonStudent = document.querySelector("#buttonStudent");
@@ -25,6 +26,8 @@ async function renderStudent() {
     const typePeople = (item.isStudent) ? "Sinh viên" : "Giảng viên";
     // const avatar = await getAvatarUser(item._id)
     table.innerHTML = '';
+
+    
     
     codeHtml += `
       <tr class="text-gray-700 dark:text-gray-400">
@@ -76,8 +79,8 @@ async function renderStudent() {
               </path>
             </svg>
           </button>
-          <button id = "buttonDelete"
-            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+          <button id = "buttonDelete" keyId = ${item._id}
+            class="delete__user flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
             aria-label="Delete">
             <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd"
@@ -92,15 +95,24 @@ async function renderStudent() {
     // const tr = document.createElement("tr")
     // tr.innerHTML = codeHtml;
     
-
     
-    document.querySelector("#buttonDelete").onclick = async function deleteSomeOne() {
-      const deleteU = await deleteUser(item._id);
-      console.log(deleteU);
-      tr.style.display = "none";
-    };
   });
-  table.innerHTML = codeHtml;
+  
+  //   document.querySelector("#buttonDelete").onclick = async function deleteSomeOne() {
+    //     const deleteU = await deleteUser(item._id);
+    //     console.log(deleteU);
+    //     tr.style.display = "none";
+    // };
+    table.innerHTML = codeHtml;
+    const allButtonDelete = document.getElementsByClassName("delete__user");
+    for (let index = 0; index < allButtonDelete.length; index++) {
+      const element = allButtonDelete[index];
+      element.addEventListener("click", async () => {
+        const statusDelete = await deleteUser(element.getAttribute("keyId"))
+        console.log(statusDelete);
+        renderStudent()
+      })
+    }
 }
 
 buttonStudent.onclick = renderStudent;
@@ -167,8 +179,8 @@ async function renderLecturer() {
               </path>
             </svg>
           </button>
-          <button
-            class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+          <button keyId=${item._id}
+            class="delete__lecturers flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
             aria-label="Delete">
             <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd"
@@ -182,6 +194,15 @@ async function renderLecturer() {
       `
   });
   table.innerHTML = codeHtml;
+  const allButtonDelete = document.getElementsByClassName("delete__lecturers");
+    for (let index = 0; index < allButtonDelete.length; index++) {
+      const element = allButtonDelete[index];
+      element.addEventListener("click", async () => {
+        const statusDelete = await deleteUser(element.getAttribute("keyId"))
+        console.log(statusDelete);
+        renderLecturer()
+      })
+    }
 }
 
 buttonLecturers.onclick = renderLecturer;
