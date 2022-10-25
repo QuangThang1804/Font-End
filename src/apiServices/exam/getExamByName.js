@@ -8,7 +8,7 @@ import { get } from "../../utils/request.js";
 
 const getExamByName = async (name, page = 1) => {
   try {
-    const res = await get(`exam/?name=${name}&page=${page}`);
+    const res = await get(`exam/search/?name=${name}&page=${page}`);
     return res;
   } catch (error) {
     console.log(error.message);
