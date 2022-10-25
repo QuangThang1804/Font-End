@@ -93,8 +93,8 @@ async function renderStudent() {
     // tr.innerHTML = codeHtml;
     
 
-    const buttonDelete = document.querySelector("#buttonDelete");
-    buttonDelete.onclick = async function deleteSomeOne() {
+    
+    document.querySelector("#buttonDelete").onclick = async function deleteSomeOne() {
       const deleteU = await deleteUser(item._id);
       console.log(deleteU);
       tr.style.display = "none";
