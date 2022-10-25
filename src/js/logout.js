@@ -8,7 +8,7 @@ async function handerLogout() {
     const buttonRegister = document.getElementById("buttonRegister");
     buttonRegister.style.display = "block";
     buttonAvatar.style.display = "none";
-    console.log("res", res)
+    console.log(res)
 }
 
 buttonLogout.addEventListener('click',(e) => {
